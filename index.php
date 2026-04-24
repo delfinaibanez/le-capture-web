@@ -77,7 +77,7 @@ if ($controlador === '' || $controlador === 'inicio') {
 
     } elseif ($accion === 'resenas') {
         AdminController::verificarSesion();
-        require_once __DIR__ . '/app/controllers/ResenaAdminController.php';
+        require_once __DIR__ . '/app/controllers/ResenaController.php';
         $c = new ResenaAdminController();
         $sub = $partes[2] ?? '';
         if ($sub === 'aprobar')        $c->aprobar($partes[3] ?? null);
