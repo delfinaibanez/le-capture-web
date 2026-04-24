@@ -1,0 +1,10 @@
+Options -Indexes
+RewriteEngine On
+RewriteBase /LeCapture_Fotografia/
+
+# Permitir acceso directo a archivos y carpetas reales
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Todo lo demás va al index.php
+RewriteRule ^(.*)$ index.php?url=$1 [QSA,L]
