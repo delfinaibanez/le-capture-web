@@ -30,4 +30,33 @@ class GaleriaModel extends Model {
         $stmt->execute();
         return $stmt->fetchColumn();
     }
+
+
+
+
+    public function obtenerDestacadaPorCategoria($categoriaId) {
+    $stmt = $this->db->prepare("
+        SELECT * FROM galeria_fotos 
+        WHERE categoria_id = :categoria_id 
+        AND destacada = 1 
+        ORDER BY created_at DESC 
+        LIMIT 1
+    ");
+    $stmt->execute([':categoria_id' => $categoriaId]);
+    $foto = $stmt->fetch(PDO::FETCH_ASSOC);
+
+    // Si no hay destacada, trae la primera disponible
+    if (!$foto) {
+        $stmt = $this->db->prepare("
+            SELECT * FROM galeria_fotos 
+            WHERE categoria_id = :categoria_id 
+            ORDER BY created_at ASC 
+            LIMIT 1
+        ");
+        $stmt->execute([':categoria_id' => $categoriaId]);
+        $foto = $stmt->fetch(PDO::FETCH_ASSOC);
+    }
+
+    return $foto;
+}
 }

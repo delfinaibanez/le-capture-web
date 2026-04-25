@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Galería — Le Capture</title>
-    <link rel="stylesheet" href="/LeCapture_Fotografia/public/css/admin.css">
+    <link rel="stylesheet" href="/LeCapture_Fotografia/public/css/admin/admin.css">
     <style>
         .grid-fotos {
             display: grid;
