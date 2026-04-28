@@ -14,7 +14,7 @@ $fotosMomentos = $fotosMomentos ?? [];
     <link rel="stylesheet" href="/LeCapture_Fotografia/public/css/main.css">
     <link rel="stylesheet" href="/LeCapture_Fotografia/public/css/navbar.css">
     <link rel="stylesheet" href="/LeCapture_Fotografia/public/css/home.css">
-        <link rel="stylesheet" href="/LeCapture_Fotografia/public/css/footer.css">
+    <link rel="stylesheet" href="/LeCapture_Fotografia/public/css/footer.css">
 
 </head>
 <body>
@@ -93,8 +93,23 @@ $hero3 = heroImg(3);
                 <a href="/LeCapture_Fotografia/contacto" class="btn-secundario">Conocé más</a>
             </div>
         </div>
-    </section>
 
+
+            </section>
+            <!-- SESIÓN TEMÁTICA -->
+    <?php if ($ultimaTematica && $fotoTematica): ?>
+    <section class="tematica-hero">
+        <img src="/LeCapture_Fotografia/uploads/<?= htmlspecialchars($fotoTematica['ruta']) ?>"
+            alt="<?= htmlspecialchars($ultimaTematica['nombre']) ?>">
+        <div class="tematica-hero__overlay"></div>
+        <div class="tematica-hero__contenido">
+            <span>Sesión especial</span>
+            <h2><?= htmlspecialchars($ultimaTematica['nombre']) ?></h2>
+            <a href="/LeCapture_Fotografia/galeria/<?= htmlspecialchars($ultimaTematica['slug']) ?>"
+            class="btn-primario">Ver sesión</a>
+        </div>
+    </section>
+    <?php endif; ?>
     <!-- ─────────────────────────────────────────
          CATEGORÍAS
     ───────────────────────────────────────── -->

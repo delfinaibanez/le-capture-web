@@ -102,6 +102,10 @@
 
             <button type="submit">Ingresar</button>
         </form>
+
+        <div style="margin-top: 18px; text-align: center;">
+            <a href="/LeCapture_Fotografia/" style="color: #b07d62; text-decoration: none; font-size: 14px;">Volver al home</a>
+        </div>
     </div>
 </body>
 </html>

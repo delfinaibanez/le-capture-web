@@ -13,4 +13,18 @@ class CategoriaModel extends Model {
         $stmt->execute();
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
+
+
+
+
+    public function obtenerUltimaTematica() {
+    $stmt = $this->db->prepare("
+        SELECT * FROM categorias_sesion 
+        WHERE activa = 1 
+        ORDER BY orden DESC 
+        LIMIT 1
+    ");
+    $stmt->execute();
+    return $stmt->fetch(PDO::FETCH_ASSOC);
+}
 }

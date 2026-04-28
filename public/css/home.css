@@ -161,6 +161,126 @@
 }
 
 /* ─────────────────────────────────────────
+   SECCIÓN TEMÁTICA
+───────────────────────────────────────── */
+.tematica-hero {
+    position: relative;
+    width: 100%;
+    min-height: 360px;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--color-fondo);
+    border: 18px solid #fff;
+    border-radius: 30px;
+    box-shadow: 0 24px 70px rgba(0,0,0,0.18);
+    box-sizing: border-box;
+}
+
+.tematica-hero img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.7s ease;
+}
+
+.tematica-hero:hover img {
+    transform: scale(1.03);
+}
+
+.tematica-hero__overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(12,8,6,0.14), rgba(12,8,6,0.62));
+}
+
+.tematica-hero::after {
+    content: 'Sesiones especiales';
+    position: absolute;
+    top: 22px;
+    left: 22px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 190px;
+    height: 46px;
+    padding: 0 18px;
+    background: #ffffff;
+    color: var(--color-texto);
+    font-weight: 700;
+    font-size: 0.78rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    border-radius: 16px;
+    box-shadow: 0 18px 38px rgba(0,0,0,0.22);
+    z-index: 3;
+}
+
+.tematica-hero__contenido {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    color: var(--color-blanco);
+    max-width: 640px;
+    padding: 22px 24px;
+    background: transparent;
+    border-radius: 22px;
+}
+
+.tematica-hero__contenido span {
+    display: none;
+}
+
+.tematica-hero__contenido h2 {
+    font-size: clamp(2rem, 3.2vw, 3rem);
+    margin-bottom: 18px;
+    line-height: 1.05;
+    text-shadow: 0 14px 30px rgba(0,0,0,0.32);
+}
+
+.tematica-hero__contenido .btn-primario {
+    padding: 14px 38px;
+    background: rgba(255,255,255,0.18);
+    color: var(--color-blanco);
+    font-weight: 700;
+    border: 1px solid rgba(255,255,255,0.7);
+    box-shadow: 0 10px 24px rgba(0,0,0,0.16);
+}
+
+.tematica-hero__contenido .btn-primario:hover {
+    background: rgba(255,255,255,0.3);
+}
+
+@media (max-width: 900px) {
+    .tematica-hero {
+        min-height: 380px;
+    }
+
+    .tematica-hero__contenido {
+        padding: 22px 20px;
+        margin: 0 20px;
+    }
+}
+
+@media (max-width: 650px) {
+    .tematica-hero {
+        min-height: 320px;
+    }
+
+    .tematica-hero__contenido {
+        padding: 20px 16px;
+    }
+
+    .tematica-hero__contenido h2 {
+        font-size: 2.2rem;
+    }
+}
+
+/* ─────────────────────────────────────────
    SECCIÓN CATEGORÍAS
 ───────────────────────────────────────── */
 .categorias {
@@ -179,7 +299,7 @@
 
 .categoria-item {
     display: flex;
-    align-items: center;
+    align-items: flex-start;
     gap: 64px;
     margin-bottom: 80px;
     max-width: var(--max-ancho);
@@ -193,10 +313,30 @@
 }
 
 .categoria-item__img {
-    flex: 1;
-    border-radius: 12px;
+    flex: 0 0 520px;
+    max-width: 520px;
+    background: #fff;
+    padding: 18px;
+    border-radius: 26px;
+    border: 14px solid #fff;
+    box-shadow: 0 28px 70px rgba(0,0,0,0.12);
     overflow: hidden;
     aspect-ratio: 4/3;
+    transform-origin: center;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.categoria-item:nth-child(odd) .categoria-item__img {
+    transform: rotate(-1.7deg);
+}
+
+.categoria-item:nth-child(even) .categoria-item__img {
+    transform: rotate(1.4deg);
+}
+
+.categoria-item__img:hover {
+    transform: translateY(-6px) rotate(0deg);
+    box-shadow: 0 38px 100px rgba(0,0,0,0.18);
 }
 
 .categoria-item__img img {
@@ -204,6 +344,7 @@
     height: 100%;
     object-fit: cover;
     transition: transform 0.6s ease;
+    border-radius: 16px;
 }
 
 .categoria-item__img:hover img {
@@ -241,6 +382,80 @@
     max-width: 400px;
 }
 
+@media (max-width: 1024px) {
+    .categorias {
+        padding: 80px 0;
+    }
+
+    .categorias__titulo {
+        margin-bottom: 48px;
+    }
+
+    .categoria-item {
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        margin-bottom: 64px;
+        padding: 0 18px;
+    }
+
+    .categoria-item:nth-child(even) {
+        flex-direction: column;
+    }
+
+    .categoria-item__img {
+        flex: 1 1 auto;
+        max-width: 100%;
+        padding: 16px;
+        border-radius: 24px;
+    }
+
+    .categoria-item__img img {
+        border-radius: 16px;
+    }
+
+    .categoria-item__texto h3 {
+        font-size: 1.95rem;
+    }
+
+    .categoria-item__texto p {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 720px) {
+    .categorias {
+        padding: 60px 0;
+    }
+
+    .categorias__titulo h2 {
+        font-size: 2rem;
+    }
+
+    .categoria-item {
+        gap: 22px;
+    }
+
+    .categoria-item__img {
+        padding: 14px;
+        border-radius: 20px;
+        aspect-ratio: auto;
+    }
+
+    .categoria-item__texto h3 {
+        font-size: 1.75rem;
+    }
+
+    .categoria-item__texto p {
+        font-size: 0.95rem;
+    }
+
+    .categoria-item__texto .btn-secundario {
+        width: 100%;
+        text-align: center;
+    }
+}
+
 /* ─────────────────────────────────────────
    GRILLA MOMENTOS
 ───────────────────────────────────────── */
@@ -251,28 +466,51 @@
 
 .momentos__grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: auto;
-    gap: 12px;
+    grid-template-columns: repeat(3, minmax(220px, 1fr));
+    gap: 22px;
     max-width: var(--max-ancho);
     margin: 0 auto;
     padding: 0 24px;
 }
 
 .momentos__grid .foto {
+    position: relative;
     overflow: hidden;
-    border-radius: 8px;
+    border-radius: 24px;
+    min-height: 240px;
+    background: #fff;
+    box-shadow: 0 18px 40px rgba(0,0,0,0.12);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
 
 .momentos__grid .foto img {
+    display: block;
     width: 100%;
-    height: 280px;
+    height: 100%;
     object-fit: cover;
     transition: transform 0.6s ease;
 }
 
+.momentos__grid .foto::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(180deg, rgba(0,0,0,0.04), rgba(0,0,0,0.18));
+    opacity: 0;
+    transition: opacity 0.35s ease;
+}
+
+.momentos__grid .foto:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 30px 70px rgba(0,0,0,0.18);
+}
+
+.momentos__grid .foto:hover::before {
+    opacity: 1;
+}
+
 .momentos__grid .foto:hover img {
-    transform: scale(1.05);
+    transform: scale(1.04);
 }
 
 .momentos__grid .foto--grande {
@@ -280,10 +518,28 @@
 }
 
 .momentos__grid .foto--grande img {
-    height: 380px;
+    height: 280px;
 }
 
-/* ─────────────────────────────────────────
+@media (max-width: 900px) {
+    .momentos__grid {
+        grid-template-columns: repeat(2, minmax(200px, 1fr));
+    }
+}
+
+@media (max-width: 650px) {
+    .momentos__grid {
+        grid-template-columns: 1fr;
+    }
+
+    .momentos__grid .foto {
+        min-height: 220px;
+    }
+
+    .momentos__grid .foto--grande img {
+        height: 260px;
+    }
+}/* ─────────────────────────────────────────
    RESEÑAS
 ───────────────────────────────────────── */
 .resenas {
@@ -516,54 +772,7 @@
     padding-right: 24px;
 }
 
-/* ─────────────────────────────────────────
-   RESPONSIVE
-───────────────────────────────────────── */
-@media (max-width: 992px) {
-    .blog-home__grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .momentos__grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    .momentos__grid .foto--grande {
-        grid-column: span 1;
-    }
-
-    .momentos__grid .foto--grande img {
-        height: 280px;
-    }
-
-    .footer__inner {
-        grid-template-columns: 1fr 1fr;
-    }
-}
-
-@media (max-width: 768px) {
-    .sobre-mi__inner {
-        flex-direction: column;
-        text-align: center;
-        gap: 32px;
-    }
-
-    .categoria-item,
-    .categoria-item:nth-child(even) {
-        flex-direction: column;
-        gap: 32px;
-    }
-
-    .blog-home__grid {
-        grid-template-columns: 1fr;
-    }
-
-    .momentos__grid {
-        grid-template-columns: 1fr;
-    }
-
-    .footer__inner {
-        grid-template-columns: 1fr;
-        gap: 32px;
-    }
+.footer__copy a {
+    color: var(--color-acento);
+    text-decoration: underline;
 }

@@ -91,6 +91,7 @@ if ($controlador === '' || $controlador === 'inicio') {
         $sub = $partes[2] ?? '';
         if ($sub === 'subir')          $c->subir();
         elseif ($sub === 'guardar')    $c->guardar();
+        elseif ($sub === 'actualizar') $c->actualizar();
         elseif ($sub === 'eliminar')   $c->eliminar($partes[3] ?? null);
         else                           $c->index();
 
