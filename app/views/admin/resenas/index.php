@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reseñas — Le Capture</title>
-    <link rel="stylesheet" href="/LeCapture_Fotografia/public/css/admin/admin.css">
+    <link rel="stylesheet" href="/leCapture_web/le-capture-web/public/css/admin/admin.css">
 </head>
 <body>
     <?php $seccionActiva = 'resenas'; require_once __DIR__ . '/../partials/sidebar.php'; ?>
@@ -43,8 +43,8 @@
                         <td><?= str_repeat('★', $resena['estrellas']) ?><?= str_repeat('☆', 5 - $resena['estrellas']) ?></td>
                         <td><?= date('d/m/Y', strtotime($resena['created_at'])) ?></td>
                         <td class="acciones">
-                            <a href="/LeCapture_Fotografia/admin/resenas/aprobar/<?= $resena['id'] ?>">Aprobar</a>
-                            <a href="/LeCapture_Fotografia/admin/resenas/eliminar/<?= $resena['id'] ?>"
+                            <a href="/leCapture_web/le-capture-web/admin/resenas/aprobar/<?= $resena['id'] ?>">Aprobar</a>
+                            <a href="/leCapture_web/le-capture-web/admin/resenas/eliminar/<?= $resena['id'] ?>"
                                class="eliminar"
                                onclick="return confirm('¿Eliminar esta reseña?')">Eliminar</a>
                         </td>
@@ -78,7 +78,7 @@
                         <td><?= str_repeat('★', $resena['estrellas']) ?><?= str_repeat('☆', 5 - $resena['estrellas']) ?></td>
                         <td><?= date('d/m/Y', strtotime($resena['created_at'])) ?></td>
                         <td class="acciones">
-                            <a href="/LeCapture_Fotografia/admin/resenas/eliminar/<?= $resena['id'] ?>"
+                            <a href="/leCapture_web/le-capture-web/admin/resenas/eliminar/<?= $resena['id'] ?>"
                                class="eliminar"
                                onclick="return confirm('¿Eliminar esta reseña?')">Eliminar</a>
                         </td>

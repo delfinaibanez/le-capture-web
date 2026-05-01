@@ -4,8 +4,9 @@ session_start();
 require_once __DIR__ . '/config/Conexion.php';
 
 // Limpiar y separar la URL
-$url = trim($_GET['url'] ?? $_SERVER['REQUEST_URI'] ?? '', '/');
-$url = preg_replace('#^/?LeCapture_Fotografia/?#', '', $url);
+// Reemplaza las líneas 7 a 10 por esto:
+$script_name = dirname($_SERVER['SCRIPT_NAME']);
+$url = str_replace($script_name, '', $_SERVER['REQUEST_URI']);
 $url = trim($url, '/');
 $partes = explode('/', $url);
 
@@ -41,6 +42,11 @@ if ($controlador === '' || $controlador === 'inicio') {
     require_once __DIR__ . '/app/controllers/ContactoController.php';
     $c = new ContactoController();
     $accion === 'enviar' ? $c->enviar() : $c->index();
+
+} elseif ($controlador === 'sobre-mi') {
+    require_once __DIR__ . '/app/controllers/InicioController.php';
+    $c = new InicioController();
+    $c->sobreMi();
 
 // ─────────────────────────────────────────
 // RUTAS DEL ADMIN

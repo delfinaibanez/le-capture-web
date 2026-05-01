@@ -151,13 +151,13 @@
     <aside class="sidebar">
         <div class="logo">Le Capture</div>
         <nav>
-            <a href="/LeCapture_Fotografia/admin/dashboard" class="activo">Inicio</a>
-            <a href="/LeCapture_Fotografia/admin/posts">Blog</a>
-            <a href="/LeCapture_Fotografia/admin/galeria">Galería</a>
-            <a href="/LeCapture_Fotografia/admin/resenas">Reseñas</a>
+            <a href="/leCapture_web/le-capture-web/admin/dashboard" class="activo">Inicio</a>
+            <a href="/leCapture_web/le-capture-web/admin/posts">Blog</a>
+            <a href="/leCapture_web/le-capture-web/admin/galeria">Galería</a>
+            <a href="/leCapture_web/le-capture-web/admin/resenas">Reseñas</a>
         </nav>
         <div class="cerrar">
-            <a href="/LeCapture_Fotografia/admin/logout">Cerrar sesión</a>
+            <a href="/leCapture_web/le-capture-web/admin/logout">Cerrar sesión</a>
         </div>
     </aside>
 
@@ -189,9 +189,9 @@
         <div class="accesos">
             <h2>Accesos rápidos</h2>
             <div class="botones">
-                <a href="/LeCapture_Fotografia/admin/posts/nuevo">Nuevo post</a>
-                <a href="/LeCapture_Fotografia/admin/galeria/subir">Subir fotos</a>
-                <a href="/LeCapture_Fotografia/admin/resenas">Ver reseñas</a>
+                <a href="/leCapture_web/le-capture-web/admin/posts/nuevo">Nuevo post</a>
+                <a href="/leCapture_web/le-capture-web/admin/galeria/subir">Subir fotos</a>
+                <a href="/leCapture_web/le-capture-web/admin/resenas">Ver reseñas</a>
             </div>
         </div>
     </main>

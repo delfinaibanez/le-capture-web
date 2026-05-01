@@ -16,21 +16,21 @@ class ResenaAdminController {
 
     public function aprobar($id) {
         if (!$id) {
-            header('Location: /LeCapture_Fotografia/admin/resenas');
+            header('Location: /leCapture_web/le-capture-web/admin/resenas');
             exit;
         }
         $this->model->aprobar($id);
-        header('Location: /LeCapture_Fotografia/admin/resenas');
+        header('Location: /leCapture_web/le-capture-web/admin/resenas');
         exit;
     }
 
     public function eliminar($id) {
         if (!$id) {
-            header('Location: /LeCapture_Fotografia/admin/resenas');
+            header('Location: /leCapture_web/le-capture-web/admin/resenas');
             exit;
         }
         $this->model->eliminar($id);
-        header('Location: /LeCapture_Fotografia/admin/resenas');
+        header('Location: /leCapture_web/le-capture-web/admin/resenas');
         exit;
     }
 }

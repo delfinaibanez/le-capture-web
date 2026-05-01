@@ -91,7 +91,7 @@
             <div class="error"><?= htmlspecialchars($error) ?></div>
         <?php endif; ?>
 
-        <form method="POST" action="/LeCapture_Fotografia/admin/login">
+        <form method="POST" action="/leCapture_web/le-capture-web/admin/login">
             <label for="email">Email</label>
             <input type="email" id="email" name="email"
                    value="<?= htmlspecialchars($_POST['email'] ?? '') ?>"
@@ -104,7 +104,7 @@
         </form>
 
         <div style="margin-top: 18px; text-align: center;">
-            <a href="/LeCapture_Fotografia/" style="color: #b07d62; text-decoration: none; font-size: 14px;">Volver al home</a>
+            <a href="/leCapture_web/le-capture-web/" style="color: #b07d62; text-decoration: none; font-size: 14px;">Volver al home</a>
         </div>
     </div>
 </body>

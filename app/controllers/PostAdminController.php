@@ -19,7 +19,7 @@ class PostAdminController {
 
     public function guardar() {
         if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-            header('Location: /LeCapture_Fotografia/admin/posts');
+            header('Location: /leCapture_web/le-capture-web/admin/posts');
             exit;
         }
 
@@ -55,7 +55,7 @@ class PostAdminController {
         ];
 
         $this->model->insertar($datos);
-        header('Location: /LeCapture_Fotografia/admin/posts');
+        header('Location: /leCapture_web/le-capture-web/admin/posts');
         exit;
     }
 
@@ -64,12 +64,12 @@ class PostAdminController {
             // Formulario editar
         public function editar($id) {
             if (!$id) {
-                header('Location: /LeCapture_Fotografia/admin/posts');
+                header('Location: /leCapture_web/le-capture-web/admin/posts');
                 exit;
             }
             $post = $this->model->obtenerPorId($id);
             if (!$post) {
-                header('Location: /LeCapture_Fotografia/admin/posts');
+                header('Location: /leCapture_web/le-capture-web/admin/posts');
                 exit;
             }
             require_once __DIR__ . '/../views/admin/posts/form.php';
@@ -78,7 +78,7 @@ class PostAdminController {
         // Actualizar post existente
         public function actualizar($id) {
             if ($_SERVER['REQUEST_METHOD'] !== 'POST' || !$id) {
-                header('Location: /LeCapture_Fotografia/admin/posts');
+                header('Location: /leCapture_web/le-capture-web/admin/posts');
                 exit;
             }
 
@@ -123,7 +123,7 @@ class PostAdminController {
             ];
 
             $this->model->actualizar($id, $datos);
-            header('Location: /LeCapture_Fotografia/admin/posts');
+            header('Location: /leCapture_web/le-capture-web/admin/posts');
             exit;
         }
 
@@ -173,7 +173,7 @@ class PostAdminController {
 
             public function eliminar($id) {
         if (!$id) {
-            header('Location: /LeCapture_Fotografia/admin/posts');
+            header('Location: /leCapture_web/le-capture-web/admin/posts');
             exit;
         }
 
@@ -185,7 +185,7 @@ class PostAdminController {
         }
 
         $this->model->eliminar($id);
-        header('Location: /LeCapture_Fotografia/admin/posts');
+        header('Location: /leCapture_web/le-capture-web/admin/posts');
         exit;
     }
 

@@ -1,6 +1,6 @@
 Options -Indexes
 RewriteEngine On
-RewriteBase /LeCapture_Fotografia/
+RewriteBase /leCapture_web/le-capture-web/
 
 # Permitir acceso directo a archivos y carpetas reales
 RewriteCond %{REQUEST_FILENAME} !-f

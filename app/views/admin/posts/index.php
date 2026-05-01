@@ -38,20 +38,20 @@
     <aside class="sidebar">
         <div class="logo">Le Capture</div>
         <nav>
-            <a href="/LeCapture_Fotografia/admin/dashboard">Inicio</a>
-            <a href="/LeCapture_Fotografia/admin/posts" class="activo">Blog</a>
-            <a href="/LeCapture_Fotografia/admin/galeria">Galería</a>
-            <a href="/LeCapture_Fotografia/admin/resenas">Reseñas</a>
+            <a href="/leCapture_web/le-capture-web/admin/dashboard">Inicio</a>
+            <a href="/leCapture_web/le-capture-web/admin/posts" class="activo">Blog</a>
+            <a href="/leCapture_web/le-capture-web/admin/galeria">Galería</a>
+            <a href="/leCapture_web/le-capture-web/admin/resenas">Reseñas</a>
         </nav>
         <div class="cerrar">
-            <a href="/LeCapture_Fotografia/admin/logout">Cerrar sesión</a>
+            <a href="/leCapture_web/le-capture-web/admin/logout">Cerrar sesión</a>
         </div>
     </aside>
 
     <main class="contenido">
         <div class="cabecera">
             <h1>Posts del blog</h1>
-            <a href="/LeCapture_Fotografia/admin/posts/nuevo" class="btn">+ Nuevo post</a>
+            <a href="/leCapture_web/le-capture-web/admin/posts/nuevo" class="btn">+ Nuevo post</a>
         </div>
 
         <table>
@@ -82,8 +82,8 @@
                         </td>
                         <td><?= $post['fecha_publicacion'] ? date('d/m/Y', strtotime($post['fecha_publicacion'])) : '—' ?></td>
                         <td class="acciones">
-                            <a href="/LeCapture_Fotografia/admin/posts/editar/<?= $post['id'] ?>">Editar</a>
-                            <a href="/LeCapture_Fotografia/admin/posts/eliminar/<?= $post['id'] ?>"
+                            <a href="/leCapture_web/le-capture-web/admin/posts/editar/<?= $post['id'] ?>">Editar</a>
+                            <a href="/leCapture_web/le-capture-web/admin/posts/eliminar/<?= $post['id'] ?>"
                                class="eliminar"
                                onclick="return confirm('¿Seguro que querés eliminar este post?')">Eliminar</a>
                         </td>

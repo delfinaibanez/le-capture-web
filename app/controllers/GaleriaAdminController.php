@@ -28,7 +28,7 @@ class GaleriaAdminController {
 
     public function actualizar() {
         if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-            header('Location: /LeCapture_Fotografia/admin/galeria');
+            header('Location: /leCapture_web/le-capture-web/admin/galeria');
             exit;
         }
 
@@ -42,7 +42,7 @@ class GaleriaAdminController {
         ];
 
         $this->guardarConfiguracion($config);
-        header('Location: /LeCapture_Fotografia/admin/galeria?guardado=1');
+        header('Location: /leCapture_web/le-capture-web/admin/galeria?guardado=1');
         exit;
     }
 
@@ -76,7 +76,7 @@ class GaleriaAdminController {
     // Procesar subida de fotos
     public function guardar() {
         if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-            header('Location: /LeCapture_Fotografia/admin/galeria');
+            header('Location: /leCapture_web/le-capture-web/admin/galeria');
             exit;
         }
 
@@ -144,7 +144,7 @@ class GaleriaAdminController {
         }
 
         if ($subidas > 0) {
-            header('Location: /LeCapture_Fotografia/admin/galeria?subidas=' . $subidas);
+            header('Location: /leCapture_web/le-capture-web/admin/galeria?subidas=' . $subidas);
         } else {
             $error      = 'No se pudo subir ninguna foto. Verificá el formato y tamaño.';
             $categorias = $this->categoriaModel->obtenerActivas();
@@ -156,7 +156,7 @@ class GaleriaAdminController {
     // Eliminar foto
     public function eliminar($id) {
         if (!$id) {
-            header('Location: /LeCapture_Fotografia/admin/galeria');
+            header('Location: /leCapture_web/le-capture-web/admin/galeria');
             exit;
         }
 
@@ -168,7 +168,7 @@ class GaleriaAdminController {
             $this->model->eliminar($id);
         }
 
-        header('Location: /LeCapture_Fotografia/admin/galeria');
+        header('Location: /leCapture_web/le-capture-web/admin/galeria');
         exit;
     }
 }

@@ -41,6 +41,11 @@ class InicioController {
     require_once __DIR__ . '/../views/home/index.php';
 }
 
+    public function sobreMi() {
+        $paginaActiva = 'sobre-mi';
+        require_once __DIR__ . '/../views/sobre-mi/index.php';
+    }
+
     private function leerConfiguracionGaleria() {
         $ruta = __DIR__ . '/../../config/galeria_settings.json';
         if (!file_exists($ruta)) {

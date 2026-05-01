@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Galería — Le Capture</title>
-    <link rel="stylesheet" href="/LeCapture_Fotografia/public/css/admin/admin.css">
+    <link rel="stylesheet" href="/leCapture_web/le-capture-web/public/css/admin/admin.css">
     <style>
         .grid-fotos {
             display: grid;
@@ -62,7 +62,7 @@
         <div class="cabecera">
             <h1>Galería</h1>
             <div>
-                <a href="/LeCapture_Fotografia/admin/galeria/subir" class="btn">+ Subir fotos</a>
+                <a href="/leCapture_web/le-capture-web/admin/galeria/subir" class="btn">+ Subir fotos</a>
             </div>
         </div>
 
@@ -78,7 +78,7 @@
             </div>
         <?php endif; ?>
 
-        <form method="POST" action="/LeCapture_Fotografia/admin/galeria/actualizar">
+        <form method="POST" action="/leCapture_web/le-capture-web/admin/galeria/actualizar">
             <div class="config-panel" style="margin-bottom:24px; padding:18px 20px; background:#fff; border-radius:16px; box-shadow:0 12px 30px rgba(0,0,0,0.06);">
                 <label for="max_mostrar" style="display:block; font-size:14px; margin-bottom:8px; color:#555;">Cantidad de fotos que se mostrarán en momentos captados</label>
                 <input type="number" id="max_mostrar" name="max_mostrar" value="<?= htmlspecialchars($config['maxFotos'] ?? 6) ?>" min="1" max="10" style="width:100px; padding:10px 12px; border:1px solid #ddd; border-radius:8px;" />
@@ -95,7 +95,7 @@
                 <div class="grid-fotos">
                     <?php foreach ($fotos as $foto): ?>
                         <div class="foto-card">
-                            <img src="/LeCapture_Fotografia/uploads/<?= htmlspecialchars($foto['ruta']) ?>" 
+                            <img src="/leCapture_web/le-capture-web/uploads/<?= htmlspecialchars($foto['ruta']) ?>" 
                                  alt="<?= htmlspecialchars($foto['descripcion'] ?? '') ?>">
                             <div class="foto-info">
                                 <label style="display:flex; align-items:center; gap:8px; font-size:13px; color:#555;">
@@ -103,7 +103,7 @@
                                            <?= in_array($foto['id'], $config['visible'] ?? [], true) ? 'checked' : '' ?> />
                                     Mostrar en inicio
                                 </label>
-                                <a href="/LeCapture_Fotografia/admin/galeria/eliminar/<?= $foto['id'] ?>"
+                                <a href="/leCapture_web/le-capture-web/admin/galeria/eliminar/<?= $foto['id'] ?>"
                                    onclick="return confirm('¿Eliminar esta foto?')">Eliminar</a>
                             </div>
                         </div>

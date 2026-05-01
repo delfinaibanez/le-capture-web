@@ -14,7 +14,7 @@ class AdminController {
 
     public function login() {
         if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
-            header('Location: /LeCapture_Fotografia/admin/login');
+            header('Location: /leCapture_web/le-capture-web/admin/login');
             exit;
         }
 
@@ -38,14 +38,14 @@ class AdminController {
         $_SESSION['admin_id']     = $admin['id'];
         $_SESSION['admin_nombre'] = $admin['nombre'];
 
-        header('Location: /LeCapture_Fotografia/admin/dashboard');
+        header('Location: /leCapture_web/le-capture-web/admin/dashboard');
         exit;
     }
 
 
     public static function verificarSesion() {
         if (empty($_SESSION['admin_id'])) {
-            header('Location: /LeCapture_Fotografia/admin/login');
+            header('Location: /leCapture_web/le-capture-web/admin/login');
             exit;
         }
     }
@@ -70,7 +70,7 @@ class AdminController {
         }
 
         session_destroy();
-        header('Location: /LeCapture_Fotografia/');
+        header('Location: /leCapture_web/le-capture-web/');
         exit;
     }
 }

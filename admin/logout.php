@@ -19,5 +19,5 @@ if (ini_get('session.use_cookies')) {
 }
 
 session_destroy();
-header('Location: /LeCapture_Fotografia/');
+header('Location: /leCapture_web/le-capture-web/');
 exit;

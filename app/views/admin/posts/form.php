@@ -43,20 +43,20 @@
     <aside class="sidebar">
         <div class="logo">Le Capture</div>
         <nav>
-            <a href="/LeCapture_Fotografia/admin/dashboard">Inicio</a>
-            <a href="/LeCapture_Fotografia/admin/posts" class="activo">Blog</a>
-            <a href="/LeCapture_Fotografia/admin/galeria">Galería</a>
-            <a href="/LeCapture_Fotografia/admin/resenas">Reseñas</a>
+            <a href="/leCapture_web/le-capture-web/admin/dashboard">Inicio</a>
+            <a href="/leCapture_web/le-capture-web/admin/posts" class="activo">Blog</a>
+            <a href="/leCapture_web/le-capture-web/admin/galeria">Galería</a>
+            <a href="/leCapture_web/le-capture-web/admin/resenas">Reseñas</a>
         </nav>
         <div class="cerrar">
-            <a href="/LeCapture_Fotografia/admin/logout">Cerrar sesión</a>
+            <a href="/leCapture_web/le-capture-web/admin/logout">Cerrar sesión</a>
         </div>
     </aside>
 
     <main class="contenido">
         <div class="cabecera">
             <h1><?= isset($post) ? 'Editar post' : 'Nuevo post' ?></h1>
-            <a href="/LeCapture_Fotografia/admin/posts" class="volver">← Volver</a>
+            <a href="/leCapture_web/le-capture-web/admin/posts" class="volver">← Volver</a>
         </div>
 
         <div class="card">
@@ -66,8 +66,8 @@
 
             <?php
                 $action = isset($post)
-                    ? '/LeCapture_Fotografia/admin/posts/actualizar/' . $post['id']
-                    : '/LeCapture_Fotografia/admin/posts/guardar';
+                    ? '/leCapture_web/le-capture-web/admin/posts/actualizar/' . $post['id']
+                    : '/leCapture_web/le-capture-web/admin/posts/guardar';
             ?>
 
             <form method="POST" action="<?= $action ?>" enctype="multipart/form-data">
@@ -83,7 +83,7 @@
                 <input type="file" id="imagen" name="imagen" accept="image/jpeg,image/png,image/webp">
                 <?php if (!empty($post['imagen_portada'])): ?>
                     <div class="preview">
-                        <img src="/LeCapture_Fotografia/uploads/<?= htmlspecialchars($post['imagen_portada']) ?>" alt="Portada actual" style="max-width:200px;border-radius:8px;">
+                        <img src="/leCapture_web/le-capture-web/uploads/<?= htmlspecialchars($post['imagen_portada']) ?>" alt="Portada actual" style="max-width:200px;border-radius:8px;">
                         <p style="font-size:12px;color:#888;margin-top:4px;">Portada actual</p>
                     </div>
                 <?php endif; ?>
@@ -102,7 +102,7 @@
 
                 <div class="acciones">
                     <button type="submit" class="btn">Guardar</button>
-                    <a href="/LeCapture_Fotografia/admin/posts" class="btn btn-secundario">Cancelar</a>
+                    <a href="/leCapture_web/le-capture-web/admin/posts" class="btn btn-secundario">Cancelar</a>
                 </div>
 
             </form>

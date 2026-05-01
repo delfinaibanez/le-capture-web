@@ -1,0 +1,128 @@
+:root {
+    --sobre-mi-bg: #fbf6f0;
+}
+
+.sobre-mi-pagina {
+    padding-top: 100px;
+    background: var(--sobre-mi-bg);
+    min-height: 100vh;
+}
+
+.sobre-mi-pagina__intro {
+    padding: 80px 0 40px;
+}
+
+.sobre-mi-pagina__inner {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    gap: 56px;
+    max-width: var(--max-ancho);
+    margin: 0 auto;
+    padding: 0 24px;
+    align-items: center;
+}
+
+.sobre-mi-pagina__texto h1 {
+    margin-bottom: 24px;
+    font-size: clamp(2.2rem, 3vw, 3rem);
+}
+
+.sobre-mi-pagina__texto p {
+    margin-bottom: 22px;
+    line-height: 1.85;
+    color: var(--color-texto);
+    max-width: 720px;
+}
+
+.sobre-mi-pagina__imagen {
+    border-radius: 28px;
+    overflow: hidden;
+    box-shadow: 0 25px 70px rgba(0,0,0,0.12);
+}
+
+.sobre-mi-pagina__imagen img {
+    width: 100%;
+    display: block;
+    aspect-ratio: 4 / 5;
+    object-fit: cover;
+}
+
+.detras-camara,
+.mi-estudio {
+    padding: 80px 0;
+    background: #ffffff;
+}
+
+.detras-camara .seccion-titulo,
+.mi-estudio .seccion-titulo {
+    max-width: var(--max-ancho);
+    margin: 0 auto 40px;
+    padding: 0 24px;
+    text-align: center;
+}
+
+.detras-camara__texto {
+    max-width: 880px;
+    margin: 0 auto;
+    padding: 0 24px;
+    color: var(--color-texto);
+    line-height: 1.85;
+}
+
+.mi-estudio__descripcion {
+    max-width: 760px;
+    margin: 0 auto 36px;
+    padding: 0 24px;
+    color: var(--color-texto);
+    line-height: 1.85;
+    text-align: center;
+}
+
+.mi-estudio__grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    max-width: var(--max-ancho);
+    margin: 0 auto;
+    padding: 0 24px 60px;
+}
+
+.mi-estudio__card {
+    border-radius: 26px;
+    overflow: hidden;
+    box-shadow: 0 25px 50px rgba(0,0,0,0.12);
+    background: #fff;
+}
+
+.mi-estudio__card img {
+    width: 100%;
+    display: block;
+    object-fit: cover;
+    aspect-ratio: 4 / 3;
+}
+
+@media (max-width: 960px) {
+    .sobre-mi-pagina__inner {
+        grid-template-columns: 1fr;
+    }
+
+    .mi-estudio__grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 640px) {
+    .sobre-mi-pagina {
+        padding-top: 70px;
+    }
+
+    .sobre-mi-pagina__texto h1 {
+        font-size: 2rem;
+    }
+
+    .sobre-mi-pagina__texto p,
+    .detras-camara__texto,
+    .mi-estudio__descripcion {
+        font-size: 0.98rem;
+    }
+}

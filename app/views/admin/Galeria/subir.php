@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Subir fotos — Le Capture</title>
-    <link rel="stylesheet" href="/LeCapture_Fotografia/public/css/admin/admin.css">
+    <link rel="stylesheet" href="/leCapture_web/le-capture-web/public/css/admin/admin.css">
 </head>
 <body>
     <?php $seccionActiva = 'galeria'; require_once __DIR__ . '/../partials/sidebar.php'; ?>
@@ -12,7 +12,7 @@
     <main class="contenido">
         <div class="cabecera">
             <h1>Subir fotos</h1>
-            <a href="/LeCapture_Fotografia/admin/galeria" class="volver">← Volver</a>
+            <a href="/leCapture_web/le-capture-web/admin/galeria" class="volver">← Volver</a>
         </div>
 
         <div class="card">
@@ -20,7 +20,7 @@
                 <div class="error"><?= htmlspecialchars($error) ?></div>
             <?php endif; ?>
 
-            <form method="POST" action="/LeCapture_Fotografia/admin/galeria/guardar" enctype="multipart/form-data">
+            <form method="POST" action="/leCapture_web/le-capture-web/admin/galeria/guardar" enctype="multipart/form-data">
 
                 <label for="categoria_id">Categoría</label>
                 <select id="categoria_id" name="categoria_id" required>
@@ -56,7 +56,7 @@
 
                 <div class="acciones-form">
                     <button type="submit" class="btn">Subir fotos</button>
-                    <a href="/LeCapture_Fotografia/admin/galeria" class="btn btn-secundario">Cancelar</a>
+                    <a href="/leCapture_web/le-capture-web/admin/galeria" class="btn btn-secundario">Cancelar</a>
                 </div>
 
             </form>

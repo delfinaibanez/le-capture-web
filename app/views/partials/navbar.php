@@ -1,28 +1,28 @@
 <header class="navbar">
     <div class="container navbar__inner">
 
-        <a href="/LeCapture_Fotografia/" class="navbar__logo">
-            <img src="/LeCapture_Fotografia/public/img/logo.png" alt="Le Capture Fotografía">
+        <a href="/leCapture_web/le-capture-web/" class="navbar__logo">
+            <img src="/leCapture_web/le-capture-web/public/img/logo.png" alt="Le Capture Fotografía">
         </a>
 
         <nav class="navbar__links">
-            <a href="/LeCapture_Fotografia/" 
+            <a href="/leCapture_web/le-capture-web/" 
                class="<?= ($paginaActiva ?? '') === 'inicio' ? 'activo' : '' ?>">
                Inicio
             </a>
-            <a href="/LeCapture_Fotografia/sobre-mi"
+            <a href="/leCapture_web/le-capture-web/sobre-mi"
                class="<?= ($paginaActiva ?? '') === 'sobre-mi' ? 'activo' : '' ?>">
                Sobre mí
             </a>
-            <a href="/LeCapture_Fotografia/galeria"
+            <a href="/leCapture_web/le-capture-web/galeria"
                class="<?= ($paginaActiva ?? '') === 'galeria' ? 'activo' : '' ?>">
                Sesiones
             </a>
-            <a href="/LeCapture_Fotografia/blog"
+            <a href="/leCapture_web/le-capture-web/blog"
                class="<?= ($paginaActiva ?? '') === 'blog' ? 'activo' : '' ?>">
                Blog
             </a>
-            <a href="/LeCapture_Fotografia/contacto"
+            <a href="/leCapture_web/le-capture-web/contacto"
                class="<?= ($paginaActiva ?? '') === 'contacto' ? 'activo' : '' ?>">
                Contacto
             </a>
@@ -41,11 +41,11 @@
     </div>
 
     <nav class="navbar__mobile" id="menu-mobile">
-        <a href="/LeCapture_Fotografia/">Inicio</a>
-        <a href="/LeCapture_Fotografia/sobre-mi">Sobre mí</a>
-        <a href="/LeCapture_Fotografia/galeria">Sesiones</a>
-        <a href="/LeCapture_Fotografia/blog">Blog</a>
-        <a href="/LeCapture_Fotografia/contacto">Contacto</a>
+        <a href="/leCapture_web/le-capture-web/">Inicio</a>
+        <a href="/leCapture_web/le-capture-web/sobre-mi">Sobre mí</a>
+        <a href="/leCapture_web/le-capture-web/galeria">Sesiones</a>
+        <a href="/leCapture_web/le-capture-web/blog">Blog</a>
+        <a href="/leCapture_web/le-capture-web/contacto">Contacto</a>
         <a href="https://wa.me/5492615000000" target="_blank" class="btn-primario">WhatsApp</a>
     </nav>
 </header>
