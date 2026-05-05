@@ -1,0 +1,489 @@
+/* ─────────────────────────────────────────
+   HERO CONTACTO
+───────────────────────────────────────── */
+.contacto-hero {
+    position: relative;
+    width: 100%;
+    height: 480px;
+    margin-top: 72px;
+    overflow: hidden;
+}
+
+.contacto-hero__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center top;
+    display: block;
+}
+
+.contacto-hero__overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(61,50,41,0.45);
+}
+
+.contacto-hero__contenido {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    gap: 12px;
+    padding: 0 24px;
+}
+
+.contacto-hero__contenido h1 {
+    color: var(--color-blanco);
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-style: italic;
+    text-shadow: 0 2px 20px rgba(0,0,0,0.2);
+}
+
+.contacto-hero__contenido p {
+    color: rgba(255,255,255,0.85);
+    font-size: 1rem;
+    max-width: 480px;
+}
+/* ─────────────────────────────────────────
+   INTRO TEXTO
+───────────────────────────────────────── */
+.contacto-intro {
+    padding: 60px 24px;
+    max-width: 680px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contacto-intro p {
+    font-size: 0.95rem;
+    line-height: 1.85;
+    color: var(--color-texto-suave);
+}
+
+/* ─────────────────────────────────────────
+   SECCIÓN PRINCIPAL
+───────────────────────────────────────── */
+.contacto-main {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 32px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px 80px;
+    align-items: start;
+}
+
+/* ─────────────────────────────────────────
+   TARJETAS INFO
+───────────────────────────────────────── */
+.contacto-info {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.info-card {
+    background: var(--color-blanco);
+    border-radius: 12px;
+    padding: 28px 24px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+}
+
+.info-card__icono {
+    width: 48px;
+    height: 48px;
+    background: var(--color-fondo-alt);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 14px;
+    font-size: 1.2rem;
+}
+
+.info-card__titulo {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--color-texto);
+    margin-bottom: 6px;
+    letter-spacing: 0.05em;
+}
+
+.info-card__dato {
+    font-size: 0.88rem;
+    color: var(--color-texto-suave);
+    line-height: 1.6;
+}
+
+.info-card__dato a {
+    color: var(--color-acento);
+}
+
+.info-card__dato a:hover {
+    text-decoration: underline;
+}
+
+/* ─────────────────────────────────────────
+   FORMULARIO
+───────────────────────────────────────── */
+.contacto-form {
+    background: var(--color-blanco);
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+}
+
+.contacto-form h2 {
+    font-size: 1.8rem;
+    margin-bottom: 28px;
+    color: var(--color-texto);
+}
+
+.form-grupo {
+    margin-bottom: 20px;
+}
+
+.form-grupo label {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--color-texto);
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.form-grupo label span {
+    color: var(--color-acento);
+}
+
+.form-grupo input,
+.form-grupo textarea,
+.form-grupo select {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1.5px solid #e8e0d8;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    font-family: var(--fuente-secundaria);
+    color: var(--color-texto);
+    background: var(--color-fondo);
+    outline: none;
+    transition: border 0.2s ease;
+}
+
+.form-grupo input::placeholder,
+.form-grupo textarea::placeholder {
+    color: #c0b0a0;
+}
+
+.form-grupo input:focus,
+.form-grupo textarea:focus,
+.form-grupo select:focus {
+    border-color: var(--color-acento);
+    background: var(--color-blanco);
+}
+
+.form-grupo textarea {
+    min-height: 140px;
+    resize: vertical;
+    line-height: 1.7;
+}
+
+.form-submit {
+    width: 100%;
+    padding: 14px;
+    background: var(--color-acento);
+    color: var(--color-blanco);
+    border: none;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: var(--transicion);
+    margin-top: 8px;
+}
+
+.form-submit:hover {
+    background: var(--color-acento-dark);
+    transform: translateY(-2px);
+}
+
+/* MENSAJES */
+.form-exito {
+    background: #e8f5e9;
+    color: #2e7d32;
+    padding: 14px 18px;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+}
+
+.form-error {
+    background: #fdecea;
+    color: #c0392b;
+    padding: 14px 18px;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+}
+
+/* ─────────────────────────────────────────
+   HORARIOS
+───────────────────────────────────────── */
+.contacto-horarios {
+    background: var(--color-fondo-alt);
+    padding: 60px 24px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.contacto-horarios h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: var(--color-texto);
+}
+
+.contacto-horarios p {
+    font-size: 0.92rem;
+    color: var(--color-texto-suave);
+    line-height: 2;
+}
+/* ─────────────────────────────────────────
+   INTRO TEXTO
+───────────────────────────────────────── */
+.contacto-intro {
+    padding: 60px 24px;
+    max-width: 680px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.contacto-intro p {
+    font-size: 0.95rem;
+    line-height: 1.85;
+    color: var(--color-texto-suave);
+}
+
+/* ─────────────────────────────────────────
+   SECCIÓN PRINCIPAL
+───────────────────────────────────────── */
+.contacto-main {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 32px;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 24px 80px;
+    align-items: start;
+}
+
+/* ─────────────────────────────────────────
+   TARJETAS INFO
+───────────────────────────────────────── */
+.contacto-info {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.info-card {
+    background: var(--color-blanco);
+    border-radius: 12px;
+    padding: 28px 24px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+}
+
+.info-card__icono {
+    width: 48px;
+    height: 48px;
+    background: var(--color-fondo-alt);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 14px;
+    font-size: 1.2rem;
+}
+
+.info-card__titulo {
+    font-size: 0.82rem;
+    font-weight: 700;
+    color: var(--color-texto);
+    margin-bottom: 6px;
+    letter-spacing: 0.05em;
+}
+
+.info-card__dato {
+    font-size: 0.88rem;
+    color: var(--color-texto-suave);
+    line-height: 1.6;
+}
+
+.info-card__dato a {
+    color: var(--color-acento);
+}
+
+.info-card__dato a:hover {
+    text-decoration: underline;
+}
+
+/* ─────────────────────────────────────────
+   FORMULARIO
+───────────────────────────────────────── */
+.contacto-form {
+    background: var(--color-blanco);
+    border-radius: 16px;
+    padding: 40px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+}
+
+.contacto-form h2 {
+    font-size: 1.8rem;
+    margin-bottom: 28px;
+    color: var(--color-texto);
+}
+
+.form-grupo {
+    margin-bottom: 20px;
+}
+
+.form-grupo label {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--color-texto);
+    margin-bottom: 8px;
+    font-weight: 500;
+}
+
+.form-grupo label span {
+    color: var(--color-acento);
+}
+
+.form-grupo input,
+.form-grupo textarea,
+.form-grupo select {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1.5px solid #e8e0d8;
+    border-radius: 10px;
+    font-size: 0.95rem;
+    font-family: var(--fuente-secundaria);
+    color: var(--color-texto);
+    background: var(--color-fondo);
+    outline: none;
+    transition: border 0.2s ease;
+}
+
+.form-grupo input::placeholder,
+.form-grupo textarea::placeholder {
+    color: #c0b0a0;
+}
+
+.form-grupo input:focus,
+.form-grupo textarea:focus,
+.form-grupo select:focus {
+    border-color: var(--color-acento);
+    background: var(--color-blanco);
+}
+
+.form-grupo textarea {
+    min-height: 140px;
+    resize: vertical;
+    line-height: 1.7;
+}
+
+.form-submit {
+    width: 100%;
+    padding: 14px;
+    background: var(--color-acento);
+    color: var(--color-blanco);
+    border: none;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: var(--transicion);
+    margin-top: 8px;
+}
+
+.form-submit:hover {
+    background: var(--color-acento-dark);
+    transform: translateY(-2px);
+}
+
+/* MENSAJES */
+.form-exito {
+    background: #e8f5e9;
+    color: #2e7d32;
+    padding: 14px 18px;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+}
+
+.form-error {
+    background: #fdecea;
+    color: #c0392b;
+    padding: 14px 18px;
+    border-radius: 10px;
+    font-size: 0.9rem;
+    margin-bottom: 20px;
+}
+
+/* ─────────────────────────────────────────
+   HORARIOS
+───────────────────────────────────────── */
+.contacto-horarios {
+    background: var(--color-fondo-alt);
+    padding: 60px 24px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.contacto-horarios h2 {
+    font-size: 1.8rem;
+    margin-bottom: 20px;
+    color: var(--color-texto);
+}
+
+.contacto-horarios p {
+    font-size: 0.92rem;
+    color: var(--color-texto-suave);
+    line-height: 2;
+}
+
+/* ─────────────────────────────────────────
+   RESPONSIVE
+───────────────────────────────────────── */
+@media (max-width: 768px) {
+    .contacto-main {
+        grid-template-columns: 1fr;
+    }
+
+    .contacto-form {
+        padding: 28px 20px;
+    }
+}
+/* ─────────────────────────────────────────
+   RESPONSIVE
+───────────────────────────────────────── */
+@media (max-width: 768px) {
+    .contacto-main {
+        grid-template-columns: 1fr;
+    }
+
+    .contacto-form {
+        padding: 28px 20px;
+    }
+}
+@media (max-width: 768px) {
+    .contacto-hero {
+        height: 320px;
+    }
+}

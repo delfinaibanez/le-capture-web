@@ -97,19 +97,31 @@ $hero3 = heroImg(3);
 
             </section>
             <!-- SESIÓN TEMÁTICA -->
-    <?php if ($ultimaTematica && $fotoTematica): ?>
-    <section class="tematica-hero">
-        <img src="/leCapture_web/le-capture-web/uploads/<?= htmlspecialchars($fotoTematica['ruta']) ?>"
-            alt="<?= htmlspecialchars($ultimaTematica['nombre']) ?>">
-        <div class="tematica-hero__overlay"></div>
-        <div class="tematica-hero__contenido">
-            <span>Sesión especial</span>
-            <h2><?= htmlspecialchars($ultimaTematica['nombre']) ?></h2>
-            <a href="/leCapture_web/le-capture-web/galeria/<?= htmlspecialchars($ultimaTematica['slug']) ?>"
-            class="btn-primario">Ver sesión</a>
+       <?php if (!empty($tematicas) && $fotoTematica): ?>
+<section class="tematica-hero">
+    <?php foreach ($tematicas as $i => $tem): ?>
+        <?php $fotoTem = $fotosPorCategoria[$tem['id']][0] ?? null; ?>
+        <?php if ($fotoTem): ?>
+        <div class="tematica-hero__slide <?= $i === count($tematicas) - 1 ? 'activo' : '' ?>">
+            <img src="/leCapture_web/le-capture-web/uploads/<?= htmlspecialchars($fotoTem['ruta']) ?>"
+                 alt="<?= htmlspecialchars($tem['nombre']) ?>">
+            <div class="tematica-hero__overlay"></div>
+            <div class="tematica-hero__contenido">
+                <div class="tematica-hero__sticker">Sesión especial</div>
+                <h2><?= htmlspecialchars($tem['nombre']) ?></h2>
+                <a href="/leCapture_web/le-capture-web/galeria/<?= htmlspecialchars($tem['slug']) ?>"
+                   class="btn-primario">Ver sesión</a>
+            </div>
         </div>
-    </section>
+        <?php endif; ?>
+    <?php endforeach; ?>
+
+    <?php if (count($tematicas) > 1): ?>
+        <button class="tematica-hero__flecha tematica-hero__flecha--prev" id="tem-prev">&#8592;</button>
+        <button class="tematica-hero__flecha tematica-hero__flecha--next" id="tem-next">&#8594;</button>
     <?php endif; ?>
+</section>
+<?php endif; ?>
     <!-- ─────────────────────────────────────────
          CATEGORÍAS
     ───────────────────────────────────────── -->

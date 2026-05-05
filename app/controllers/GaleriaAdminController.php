@@ -37,15 +37,16 @@ class GaleriaAdminController {
         $maxFotos     = max(1, min($maxFotos, 10));
 
         $config = [
-            'visible' => $visibleFotos,
+            'visible'  => $visibleFotos,
             'maxFotos' => $maxFotos,
         ];
 
-        $this->guardarConfiguracion($config);
+        $ruta = __DIR__ . '/../../config/galeria_settings.json';
+        file_put_contents($ruta, json_encode($config, JSON_PRETTY_PRINT | JSON_UNESCAPED_UNICODE));
+
         header('Location: /leCapture_web/le-capture-web/admin/galeria?guardado=1');
         exit;
     }
-
     private function leerConfiguracion() {
         $ruta = __DIR__ . '/../../config/galeria_settings.json';
         if (!file_exists($ruta)) {

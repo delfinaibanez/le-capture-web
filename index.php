@@ -3,11 +3,15 @@ session_start();
 
 require_once __DIR__ . '/config/Conexion.php';
 
-// Limpiar y separar la URL
-// Reemplaza las líneas 7 a 10 por esto:
 $script_name = dirname($_SERVER['SCRIPT_NAME']);
 $url = str_replace($script_name, '', $_SERVER['REQUEST_URI']);
 $url = trim($url, '/');
+
+// Sacar query string si existe
+if (strpos($url, '?') !== false) {
+    $url = strstr($url, '?', true);
+}
+
 $partes = explode('/', $url);
 
 $controlador = $partes[0] ?? '';
@@ -83,7 +87,7 @@ if ($controlador === '' || $controlador === 'inicio') {
 
     } elseif ($accion === 'resenas') {
         AdminController::verificarSesion();
-        require_once __DIR__ . '/app/controllers/ResenaController.php';
+        require_once __DIR__ . '/app/controllers/ResenaAdminController.php';
         $c = new ResenaAdminController();
         $sub = $partes[2] ?? '';
         if ($sub === 'aprobar')        $c->aprobar($partes[3] ?? null);

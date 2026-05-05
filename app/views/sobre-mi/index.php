@@ -11,65 +11,68 @@ $paginaActiva = 'sobre-mi';
     <link rel="stylesheet" href="/leCapture_web/le-capture-web/public/css/navbar.css">
     <link rel="stylesheet" href="/leCapture_web/le-capture-web/public/css/sobre-mi.css">
     <link rel="stylesheet" href="/leCapture_web/le-capture-web/public/css/footer.css">
+    <!-- Fuente elegante para el portfolio -->
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400&display=swap" rel="stylesheet">
 </head>
 <body>
     <?php require_once __DIR__ . '/../partials/navbar.php'; ?>
 
-    <main class="sobre-mi-pagina">
-        <section class="sobre-mi-pagina__intro">
-            <div class="sobre-mi-pagina__inner">
-                <div class="sobre-mi-pagina__texto">
+    <main class="portfolio-layout">
+        <!-- SECCIÓN INTRO: MÁS AIRE Y ELEGANCIA -->
+        <section class="intro-section">
+            <div class="intro-grid">
+                <div class="intro-content">
+                    <span class="tagline">La mirada detrás del lente</span>
                     <h1>Sobre mí</h1>
-                    <p>Hace más de 10 años que mi cámara y yo somos inseparables. En este tiempo fotografié a más de 500 bebés y familias, formándome en España en fotografía de recién nacidos y trabajando también en Irlanda y España.
-
-                         Me obsesiona que todo a mi alrededor se vea bonito y armónico: desde los accesorios hasta la decoración de cada escenografía. Y no solo en mi trabajo, también en mi vida diaria. Creo que todo es más lindo cuando le sumamos un poco de color y detalle
-
-                         Me gusta decir que soy “licenciada en casi todo” porque no me conformo con una sola cosa: coso, diseño, decoro y hasta me animo a construir escenografías (aunque la carpintería todavía no es mi fuerte 😅).
-
-                         Detrás de cada foto hay mucho más que técnica: está mi amor por lo visual, mi búsqueda de belleza en cada detalle y la convicción de que los recuerdos se merecen ser tan lindos como la historia que cuentan.</p>
-
-               </div>
-                <div class="sobre-mi-pagina__imagen">
-                    <img src="/leCapture_web/le-capture-web/public/img/sobre_mi.png" alt="Candela, fotógrafa de Le Capture">
+                    <p class="featured-text">Me llamo Candela y soy fotógrafa especializada en maternidad, recién nacidos y familias. Mi objetivo es capturar lo que no siempre se ve: los gestos, las miradas y la fuerza de cada historia.</p>
+                    <p>Detrás de cada foto hay mucho más que técnica: está mi amor por lo visual y mi búsqueda constante de la belleza armónica en cada detalle.</p>
+                </div>
+                <div class="intro-image">
+                    <img src="/leCapture_web/le-capture-web/public/img/sobre_mi.png" alt="Candela Le Capture">
+                    <div class="image-experience-badge">10+ Años de Experiencia</div>
                 </div>
             </div>
         </section>
 
-        <section class="detras-camara">
-            <div class="seccion-titulo">
-                <h2>Detrás de la cámara</h2>
-                <p>Cada sesión es un momento especial. Así es como trabajo para capturar la esencia de cada familia.</p>
-            </div>
-            <div class="detras-camara__texto">
-                <p>Trabajo con paciencia y escucha para acompañar cada etapa. Antes de cada sesión, converso con las familias para conocer sus deseos y generar un ambiente cálido, tranquilo y lleno de confianza.</p>
-                <p>Me focalizo en la conexión natural entre personas, en los detalles íntimos y en los momentos que suelen pasar rápido. El resultado es una fotografía honesta, emotiva y con un estilo que celebra la ternura de la vida familiar.</p>
+        <!-- SECCIÓN DETRÁS DE CÁMARA: DISEÑO ASIMÉTRICO -->
+        <section class="gallery-section">
+            <div class="container">
+                <div class="gallery-header">
+                    <h2>Detrás de la cámara</h2>
+                    <p>Cada sesión es un encuentro auténtico y sensible. Trabajo con paciencia para generar un ambiente cálido donde cada familia se sienta segura y protagonista.</p>
+                </div>
+                <div class="masonry-gallery">
+                    <div class="gallery-item tall">
+                        <img src="/leCapture_web/le-capture-web/public/img/hero1.webp" alt="Sesión Maternidad">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="/leCapture_web/le-capture-web/public/img/hero2.webp" alt="Recién nacido detalle">
+                    </div>
+                    <div class="gallery-item">
+                        <img src="/leCapture_web/le-capture-web/public/img/hero3.png" alt="Escenografía">
+                    </div>
+                    <div class="gallery-item wide">
+                        <img src="/leCapture_web/le-capture-web/public/img/hero2.webp" alt="Momento íntimo">
+                    </div>
+                </div>
             </div>
         </section>
 
-        <section class="mi-estudio">
-            <div class="seccion-titulo">
-                <h2>Mi estudio</h2>
-                <p>Mi espacio está pensado para que las familias se sientan cómodas y disfruten del momento.</p>
-            </div>
-            <div class="mi-estudio__descripcion">
-                <p>El estudio es luminoso y cálido, equipado con fondos suaves, accesorios y materiales confortables para las mamás, los bebés y los niños. Busco un escenario sereno donde cada sesión fluya con naturalidad.</p>
-            </div>
-            <div class="mi-estudio__grid">
-                <div class="mi-estudio__card">
-                    <img src="/leCapture_web/le-capture-web/public/img/hero1.webp" alt="Estudio fotográfico 1">
+        <!-- SECCIÓN MI ESTUDIO: TEXTO FLOTANTE -->
+        <section class="studio-section">
+            <div class="studio-container">
+                <div class="studio-text-card">
+                    <h2>Mi Estudio</h2>
+                    <p>Ubicado en Mendoza, mi espacio está pensado para la comodidad total. Es un refugio luminoso equipado con materiales suaves y tonos neutros para que la fotografía fluya con naturalidad.</p>
                 </div>
-                <div class="mi-estudio__card">
-                    <img src="/leCapture_web/le-capture-web/public/img/hero2.webp" alt="Estudio fotográfico 2">
-                </div>
-                <div class="mi-estudio__card">
-                    <img src="/leCapture_web/le-capture-web/public/img/hero3.png" alt="Estudio fotográfico 3">
+                <div class="studio-visuals">
+                    <img src="/leCapture_web/le-capture-web/public/img/hero3.png" alt="Estudio Le Capture">
                 </div>
             </div>
         </section>
     </main>
 
     <?php require_once __DIR__ . '/../partials/footer.php'; ?>
-
     <script src="/leCapture_web/le-capture-web/public/js/navbar.js"></script>
 </body>
 </html>

@@ -166,95 +166,97 @@
 .tematica-hero {
     position: relative;
     width: 100%;
-    min-height: 360px;
+    height: 420px;
     overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background: var(--color-fondo);
-    border: 18px solid #fff;
-    border-radius: 30px;
-    box-shadow: 0 24px 70px rgba(0,0,0,0.18);
-    box-sizing: border-box;
 }
 
-.tematica-hero img {
+.tematica-hero__slide {
     position: absolute;
     inset: 0;
+    opacity: 0;
+    transition: opacity 1s ease;
+}
+
+.tematica-hero__slide.activo {
+    opacity: 1;
+}
+
+.tematica-hero__slide > img {
     width: 100%;
     height: 100%;
     object-fit: cover;
     object-position: center;
-    transition: transform 0.7s ease;
-}
-
-.tematica-hero:hover img {
-    transform: scale(1.03);
+    display: block;
 }
 
 .tematica-hero__overlay {
     position: absolute;
     inset: 0;
-    background: linear-gradient(180deg, rgba(12,8,6,0.14), rgba(12,8,6,0.62));
-}
-
-.tematica-hero::after {
-    content: 'Sesiones especiales';
-    position: absolute;
-    top: 22px;
-    left: 22px;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-width: 190px;
-    height: 46px;
-    padding: 0 18px;
-    background: #ffffff;
-    color: var(--color-texto);
-    font-weight: 700;
-    font-size: 0.78rem;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    border-radius: 16px;
-    box-shadow: 0 18px 38px rgba(0,0,0,0.22);
-    z-index: 3;
+    background: rgba(61,50,41,0.38);
 }
 
 .tematica-hero__contenido {
-    position: relative;
-    z-index: 2;
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     text-align: center;
-    color: var(--color-blanco);
-    max-width: 640px;
-    padding: 22px 24px;
-    background: transparent;
-    border-radius: 22px;
+    gap: 16px;
 }
 
 .tematica-hero__contenido span {
-    display: none;
+    font-size: 0.72rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.85);
+    display: block;
 }
 
 .tematica-hero__contenido h2 {
-    font-size: clamp(2rem, 3.2vw, 3rem);
-    margin-bottom: 18px;
-    line-height: 1.05;
-    text-shadow: 0 14px 30px rgba(0,0,0,0.32);
+    color: var(--color-blanco);
+    font-size: clamp(1.8rem, 3.5vw, 3rem);
+    font-style: italic;
+    text-shadow: 0 2px 20px rgba(0,0,0,0.2);
 }
 
 .tematica-hero__contenido .btn-primario {
-    padding: 14px 38px;
-    background: rgba(255,255,255,0.18);
+    background: rgba(255,255,255,0.2);
+    backdrop-filter: blur(4px);
+    border: 1.5px solid rgba(255,255,255,0.6);
     color: var(--color-blanco);
-    font-weight: 700;
-    border: 1px solid rgba(255,255,255,0.7);
-    box-shadow: 0 10px 24px rgba(0,0,0,0.16);
+    letter-spacing: 0.1em;
+    font-size: 0.85rem;
 }
 
 .tematica-hero__contenido .btn-primario:hover {
-    background: rgba(255,255,255,0.3);
+    background: rgba(255,255,255,0.35);
+    transform: translateY(-2px);
 }
 
+.tematica-hero__flecha {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: transparent;
+    border: none;
+    color: var(--color-blanco);
+    font-size: 2rem;
+    cursor: pointer;
+    z-index: 10;
+    padding: 16px;
+    opacity: 0.7;
+    transition: var(--transicion);
+}
+
+.tematica-hero__flecha:hover { opacity: 1; }
+.tematica-hero__flecha--prev { left: 24px; }
+.tematica-hero__flecha--next { right: 24px; }
+
+@media (max-width: 768px) {
+    .tematica-hero { height: 320px; }
+}
 @media (max-width: 900px) {
     .tematica-hero {
         min-height: 380px;
@@ -775,4 +777,18 @@
 .footer__copy a {
     color: var(--color-acento);
     text-decoration: underline;
+}
+
+.tematica-hero__sticker {
+    display: inline-block;
+    background: rgba(255,255,255,0.9);
+    color: var(--color-acento);
+    font-size: 0.72rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    padding: 8px 20px;
+    border-radius: 40px;
+    font-family: var(--fuente-secundaria);
+    font-weight: 600;
+    box-shadow: 0 4px 16px rgba(0,0,0,0.1);
 }

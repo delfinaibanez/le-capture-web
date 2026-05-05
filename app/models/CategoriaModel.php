@@ -27,4 +27,25 @@ class CategoriaModel extends Model {
     $stmt->execute();
     return $stmt->fetch(PDO::FETCH_ASSOC);
 }
+
+    public function obtenerCapitulos() {
+        $stmt = $this->db->prepare("
+            SELECT * FROM categorias_sesion 
+            WHERE activa = 1 AND es_tematica = 0
+            ORDER BY orden ASC
+        ");
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    public function obtenerTematicas() {
+        $stmt = $this->db->prepare("
+            SELECT * FROM categorias_sesion 
+            WHERE activa = 1 AND es_tematica = 1
+            ORDER BY orden ASC
+        ");
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+
 }
