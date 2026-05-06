@@ -1,3 +1,6 @@
+<?php
+global $navCapitulos, $navTematicas;
+?>
 <header class="navbar">
     <div class="container navbar__inner">
 
@@ -14,10 +17,27 @@
                class="<?= ($paginaActiva ?? '') === 'sobre-mi' ? 'activo' : '' ?>">
                Sobre mí
             </a>
-            <a href="/leCapture_web/le-capture-web/galeria"
-               class="<?= ($paginaActiva ?? '') === 'galeria' ? 'activo' : '' ?>">
-               Sesiones
-            </a>
+            <div class="navbar__dropdown">
+                <a href="#" class="navbar__dropdown-trigger <?= ($paginaActiva ?? '') === 'galeria' ? 'activo' : '' ?>">
+                    Sesiones ▾
+                </a>
+                <div class="navbar__dropdown-menu">
+                    <?php foreach ($navCapitulos ?? [] as $cat): ?>
+                        <a href="/leCapture_web/le-capture-web/galeria/<?= htmlspecialchars($cat['slug']) ?>">
+                            <?= htmlspecialchars($cat['nombre']) ?>
+                        </a>
+                    <?php endforeach; ?>
+                    <?php if (!empty($navTematicas)): ?>
+                        <div class="navbar__dropdown-separador"></div>
+                        <span class="navbar__dropdown-label">Sesiones especiales</span>
+                        <?php foreach ($navTematicas as $cat): ?>
+                            <a href="/leCapture_web/le-capture-web/galeria/<?= htmlspecialchars($cat['slug']) ?>">
+                                <?= htmlspecialchars($cat['nombre']) ?>
+                            </a>
+                        <?php endforeach; ?>
+                    <?php endif; ?>
+                </div>
+            </div>
             <a href="/leCapture_web/le-capture-web/blog"
                class="<?= ($paginaActiva ?? '') === 'blog' ? 'activo' : '' ?>">
                Blog
@@ -43,9 +63,18 @@
     <nav class="navbar__mobile" id="menu-mobile">
         <a href="/leCapture_web/le-capture-web/">Inicio</a>
         <a href="/leCapture_web/le-capture-web/sobre-mi">Sobre mí</a>
-        <a href="/leCapture_web/le-capture-web/galeria">Sesiones</a>
+        <?php foreach ($navCapitulos ?? [] as $cat): ?>
+            <a href="/leCapture_web/le-capture-web/galeria/<?= htmlspecialchars($cat['slug']) ?>">
+                <?= htmlspecialchars($cat['nombre']) ?>
+            </a>
+        <?php endforeach; ?>
+        <?php foreach ($navTematicas ?? [] as $cat): ?>
+            <a href="/leCapture_web/le-capture-web/galeria/<?= htmlspecialchars($cat['slug']) ?>">
+                <?= htmlspecialchars($cat['nombre']) ?>
+            </a>
+        <?php endforeach; ?>
         <a href="/leCapture_web/le-capture-web/blog">Blog</a>
         <a href="/leCapture_web/le-capture-web/contacto">Contacto</a>
-        <a href="https://wa.me/5492615000000" target="_blank" class="btn-primario">WhatsApp</a>
+        <a href="https://wa.me/5492615788997" target="_blank" class="btn-primario">WhatsApp</a>
     </nav>
 </header>

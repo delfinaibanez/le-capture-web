@@ -211,7 +211,7 @@ $hero3 = heroImg(3);
                             <h3><?= htmlspecialchars($cat['nombre']) ?></h3>
                             <p><?= htmlspecialchars($cat['descripcion'] ?? '') ?></p>
                             <a href="/leCapture_web/le-capture-web/galeria/<?= htmlspecialchars($cat['slug']) ?>"
-                               class="btn-secundario">Ver galería</a>
+                                 class="btn-secundario">Ver galería</a>
                         <?php endif; ?>
                     </div>
                 </div>

@@ -3,6 +3,12 @@ session_start();
 
 require_once __DIR__ . '/config/Conexion.php';
 
+require_once __DIR__ . '/app/helpers/NavbarHelper.php';
+
+$navCategorias = NavbarHelper::obtenerCategorias();
+$navCapitulos  = $navCategorias['capitulos'];
+$navTematicas  = $navCategorias['tematicas'];
+
 $script_name = dirname($_SERVER['SCRIPT_NAME']);
 $url = str_replace($script_name, '', $_SERVER['REQUEST_URI']);
 $url = trim($url, '/');

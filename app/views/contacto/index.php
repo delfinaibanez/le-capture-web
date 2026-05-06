@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/leCapture_web/le-capture-web/public/css/main.css">
     <link rel="stylesheet" href="/leCapture_web/le-capture-web/public/css/navbar.css">
     <link rel="stylesheet" href="/leCapture_web/le-capture-web/public/css/contacto.css">
-    <link rel="stylesheet" href="/leCapture_web/le-capture-web/app/css/home.css">
+    <link rel="stylesheet" href="/leCapture_web/le-capture-web/public/css/home.css">
 </head>
 <body>
     <?php require_once __DIR__ . '/../partials/navbar.php'; ?>

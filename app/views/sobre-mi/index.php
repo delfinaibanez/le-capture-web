@@ -10,7 +10,7 @@ $paginaActiva = 'sobre-mi';
     <link rel="stylesheet" href="/leCapture_web/le-capture-web/public/css/main.css">
     <link rel="stylesheet" href="/leCapture_web/le-capture-web/public/css/navbar.css">
     <link rel="stylesheet" href="/leCapture_web/le-capture-web/public/css/sobre-mi.css">
-    <link rel="stylesheet" href="/leCapture_web/le-capture-web/public/css/footer.css">
+    <link rel="stylesheet" href="/leCapture_web/le-capture-web/public/css/home.css">    
     <!-- Fuente elegante para el portfolio -->
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400&display=swap" rel="stylesheet">
 </head>
@@ -50,6 +50,12 @@ $paginaActiva = 'sobre-mi';
                     </div>
                     <div class="gallery-item">
                         <img src="/leCapture_web/le-capture-web/public/img/hero3.png" alt="Escenografía">
+                    </div>
+                    <div class="gallery-item wide">
+                        <img src="/leCapture_web/le-capture-web/public/img/hero2.webp" alt="Momento íntimo">
+                    </div>
+                    <div class="gallery-item wide">
+                        <img src="/leCapture_web/le-capture-web/public/img/hero2.webp" alt="Momento íntimo">
                     </div>
                     <div class="gallery-item wide">
                         <img src="/leCapture_web/le-capture-web/public/img/hero2.webp" alt="Momento íntimo">
