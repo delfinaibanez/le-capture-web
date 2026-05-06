@@ -48,4 +48,14 @@ class CategoriaModel extends Model {
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
+
+        public function obtenerPorSlug($slug) {
+        $stmt = $this->db->prepare("
+            SELECT * FROM categorias_sesion 
+            WHERE slug = :slug AND activa = 1
+        ");
+        $stmt->execute([':slug' => $slug]);
+        return $stmt->fetch(PDO::FETCH_ASSOC);
+    }
+
 }
