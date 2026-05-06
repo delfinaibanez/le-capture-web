@@ -30,3 +30,13 @@ if (trigger && menu) {
         }
     });
 }
+
+// Dropdown mobile sesiones
+const mobileTrigger = document.getElementById('mobile-sesiones-trigger');
+const mobileMenu    = document.getElementById('mobile-sesiones-menu');
+
+if (mobileTrigger && mobileMenu) {
+    mobileTrigger.addEventListener('click', () => {
+        mobileMenu.classList.toggle('abierto');
+    });
+}
