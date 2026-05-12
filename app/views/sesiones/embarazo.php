@@ -21,8 +21,11 @@
         <span class="sesion-header__etiqueta">Sesiones</span>
         <h1 class="sesion-header__titulo">Sesión de Embarazo</h1>
         <p class="sesion-header__descripcion">
-            La espera es un capítulo único en tu vida. Capturamos la belleza de tu embarazo 
-            con fotos naturales, emotivas y atemporales que vas a atesorar para siempre.
+        Tu embarazo es un momento único, lleno de cambios, ilusión y ternura. En esta sesión busco capturar esa conexión tan especial entre vos, tu bebé y tu familia.
+        Cada detalle está pensado para que te sientas cómoda, tranquila y radiante, en un ambiente cálido y cuidado.
+
+        Podés elegir entre fotos íntimas y delicadas en estudio, o imágenes naturales al aire libre, con luz suave y escenarios que realzan tu esencia.
+        El resultado son recuerdos auténticos, elegantes y atemporales que te acompañarán toda la vida
         </p>
     </div>
 
@@ -65,15 +68,16 @@
         </div>
         <div class="packs-grid">
             <div class="pack-card">
-                <div class="pack-card__nombre">Pack Básico</div>
-                <div class="pack-card__precio">$45.000</div>
-                <div class="pack-card__descripcion">Ideal para capturar los momentos esenciales de tu embarazo</div>
+                <div class="pack-card__nombre">Pack Escencial</div>
+                <div class="pack-card__precio">$120.000</div>
+                <div class="pack-card__descripcion">Para quienes sólo quieren el recuerdo del momento</div>
                 <ul class="pack-card__lista">
                     <li>Sesión de 30 minutos en estudio</li>
-                    <li>15 fotos editadas en alta resolución</li>
-                    <li>Galería digital privada</li>
-                    <li>1 outfit/cambio de vestuario</li>
-                    <li>Asesoramiento de poses</li>
+                    <li>Disponibilidad sólo en estudio</li>
+                    <li>Inluye vestuario y accesorios.</li>
+                    <li>1 Escenario</li>
+                    <li>8 Fotografías digitales editadas en alta calidad.</li>
+                    <li>Entrega en álbum digital privado.</li>
                 </ul>
                 <a href="https://wa.me/5492615788997" target="_blank" class="btn-secundario">Reservar Sesión</a>
             </div>
@@ -81,34 +85,35 @@
             <div class="pack-card destacado">
                 <div class="pack-card__badge">Más Elegido</div>
                 <div class="pack-card__nombre">Pack Premium</div>
-                <div class="pack-card__precio">$75.000</div>
+                <div class="pack-card__precio">$178.000</div>
                 <div class="pack-card__descripcion">La opción más elegida para una experiencia completa</div>
                 <ul class="pack-card__lista">
-                    <li>Sesión de 60 minutos en estudio</li>
-                    <li>30 fotos editadas en alta resolución</li>
-                    <li>Galería digital privada</li>
-                    <li>2 outfits/cambios de vestuario</li>
-                    <li>Asesoramiento de poses y styling</li>
-                    <li>5 fotos artísticas en blanco y negro</li>
-                    <li>Telas y accesorios del estudio incluidos</li>
+                    <li>1 Horas de sesión.</li>
+                    <li>Incluye vestuario y accesorios.</li>
+                    <li>3 Escenarios diferentes con cambio de vestuario.</li>
+                    <li>20 Fotografías digitales editadas en alta calidad.</li>
+                    <li>20 Fotografías impresas en 13x18cm calidad laboratorio.</li>
+                    <li>Fotos del grupo familiar y hasta 2 abuelos.</li>
+                    <li>Entrega en álbum digital privado.</li>
+                    <li>Entrega en cajita de madera.</li>
+                    <li>Envío a domicilio incluído (Válido sólo para el Gran Mendoza).</li>
                 </ul>
                 <a href="https://wa.me/5492615788997" target="_blank" class="btn-primario">Reservar Sesión</a>
             </div>
 
             <div class="pack-card">
-                <div class="pack-card__nombre">Pack Deluxe</div>
-                <div class="pack-card__precio">$120.000</div>
-                <div class="pack-card__descripcion">La experiencia más completa con productos físicos</div>
+                <div class="pack-card__nombre">Pack Silver</div>
+                <div class="pack-card__precio">$156.000</div>
+                <div class="pack-card__descripcion"> El equilibrio perfecto </div>
                 <ul class="pack-card__lista">
-                    <li>Sesión de 90 minutos en estudio</li>
-                    <li>50 fotos editadas en alta resolución</li>
-                    <li>Galería digital privada</li>
-                    <li>3 outfits/cambios de vestuario</li>
-                    <li>Asesoramiento de poses y styling completo</li>
-                    <li>10 fotos artísticas en blanco y negro</li>
-                    <li>Telas, accesorios y flores incluidos</li>
-                    <li>Álbum premium 20x20cm con 20 fotos</li>
-                    <li>5 impresiones fine art 13x18cm</li>
+                    <li>1 Hora de sesión.</li>
+                    <li>Incluye vestuario y accesorios.</li>
+                    <li>2 Escenarios/fondos diferentes con cambio de vestuario.</li>
+                    <li>15 Fotografías digitales editadas en alta calidad.</li>
+                    <li>15 Fotografías impresas en 13x18 calidad laboratorio.</li>
+                    <li>Entrega en álbum digital privado.</li>
+                    <li>Entrega en cajita de papel.</li>
+                    <li>Envío a domicilio incluído (Válido sólo para el Gran Mendoza).</li>
                 </ul>
                 <a href="https://wa.me/5492615788997" target="_blank" class="btn-secundario">Reservar Sesión</a>
             </div>
@@ -158,20 +163,28 @@
         </div>
         <div class="faq-lista">
             <div class="faq-item">
-                <button class="faq-pregunta">¿Cuál es el mejor momento para hacer la sesión de embarazo?</button>
-                <div class="faq-respuesta">El momento ideal es entre las semanas 28 y 34 de gestación. En esta etapa la panza ya es visible y redonda, pero todavía te sentís cómoda y con energía para la sesión.</div>
+                <button class="faq-pregunta">¿En qué momento del embarazo se recomienda hacer la sesión?</button>
+                <div class="faq-respuesta">Lo ideal es entre la semana 28 y la 34, cuando la panza ya está bien formada y vos todavía te sentís cómoda para posar.</div>
             </div>
             <div class="faq-item">
-                <button class="faq-pregunta">¿Qué debo llevar a la sesión?</button>
-                <div class="faq-respuesta">No necesitás traer nada especial. El estudio cuenta con telas, vestidos y accesorios para la sesión. Si tenés algún elemento especial como una ecografía o algo significativo para vos, podés traerlo.</div>
+                <button class="faq-pregunta">¿Dónde se realizan las fotos?</button>
+                <div class="faq-respuesta">Podés elegir entre mi estudio (cálido, preparado y con todo lo necesario) o en exteriores, con escenarios naturales y luz suave.</div>
             </div>
             <div class="faq-item">
-                <button class="faq-pregunta">¿Puede venir mi pareja y/o hijos a la sesión?</button>
-                <div class="faq-respuesta">¡Por supuesto! Es hermoso capturar esos momentos en familia. Podemos incluir fotos con tu pareja e hijos dentro de la misma sesión sin costo adicional.</div>
+                <button class="faq-pregunta">¿Qué ropa tengo que llevar?</button>
+                <div class="faq-respuesta">Te recomiendo traer prendas neutras, vestidos largos, ropa cómoda y algún conjunto que te haga sentir especial. En el estudio también tenés accesorios, vestidos y telas que podemos usar.</div>
             </div>
             <div class="faq-item">
-                <button class="faq-pregunta">¿Cuánto tiempo dura la sesión?</button>
-                <div class="faq-respuesta">Depende del pack elegido: el Básico dura 30 minutos, el Premium 60 minutos y el Deluxe 90 minutos. Siempre trabajamos a tu ritmo y con descansos si los necesitás.</div>
+                <button class="faq-pregunta">¿Puedo decidir la escenografía o los colores de la sesión?</button>
+                <div class="faq-respuesta">¡Sí! Antes de la sesión charlamos sobre el estilo que más te guste: colores neutros, escenarios minimalistas o algo más alegre y juguetón. La idea es que las fotos representen tu gusto y personalidad.</div>
+            </div>
+              <div class="faq-item">
+                <button class="faq-pregunta">¿Cuándo recibiremos las fotos?</button>
+                <div class="faq-respuesta">En un plazo aproximado de 15 a 20 días hábiles, listas para descargar y/o impresas según el paquete contratado.</div>
+            </div>
+              <div class="faq-item">
+                <button class="faq-pregunta">¿Pueden participar mi pareja o mis hijos?</button>
+                <div class="faq-respuesta">¡Por supuesto! Ellos son parte de este momento único y las fotos en familia hacen que la experiencia sea aún más significativa.</div>
             </div>
         </div>
     </section>
@@ -180,8 +193,8 @@
     <section class="sesion-cta">
         <div class="sesion-cta__inner">
             <h2>¿Lista para tu sesión de embarazo?</h2>
-            <p>Reservá tu lugar con tiempo. Las sesiones de embarazo se agendan con anticipación para asegurar que estemos en el momento ideal de tu gestación.</p>
-            <a href="https://wa.me/5492615788997" target="_blank" class="btn-primario">Reservar mi Sesión</a>
+            <p>Cupos limitados por mes. Te sugiero reservar tu lugar con antelación para garantizar disponibilidad en tu semana ideal de embarazo. ¡Aseguremos juntas tus recuerdos!</p>
+            <a href="/leCapture_web/le-capture-web/app/views/contacto/index.php" target="_blank" class="btn-primario">Reservar mi Sesión</a>
         </div>
     </section>
 

@@ -407,6 +407,60 @@
 }
 
 /* ─────────────────────────────────────────
+   TABS BEBÉS
+───────────────────────────────────────── */
+.sesion-tabs {
+    display: inline-flex;
+    background: var(--color-fondo-alt);
+    border-radius: 40px;
+    padding: 4px;
+    margin-top: 32px;
+    position: relative;
+}
+
+.sesion-tab {
+    padding: 10px 28px;
+    border-radius: 40px;
+    border: none;
+    background: transparent;
+    color: var(--color-texto-suave);
+    font-size: 0.9rem;
+    font-family: var(--fuente-secundaria);
+    cursor: pointer;
+    transition: color 0.3s ease;
+    position: relative;
+    z-index: 1;
+}
+
+.sesion-tab.activo {
+    color: var(--color-texto);
+}
+
+.sesion-tabs::before {
+    content: '';
+    position: absolute;
+    top: 4px;
+    left: 4px;
+    width: calc(50% - 4px);
+    height: calc(100% - 8px);
+    background: var(--color-blanco);
+    border-radius: 40px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    transition: transform 0.3s ease;
+}
+
+.sesion-tabs.tab-69::before {
+    transform: translateX(100%);
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.activo {
+    display: block;
+}
+/* ─────────────────────────────────────────
    RESPONSIVE
 ───────────────────────────────────────── */
 @media (max-width: 768px) {
@@ -432,3 +486,6 @@
         padding: 36px 24px;
     }
 }
+
+
+

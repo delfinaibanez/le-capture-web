@@ -28,34 +28,34 @@ class CategoriaModel extends Model {
     return $stmt->fetch(PDO::FETCH_ASSOC);
 }
 
-    public function obtenerCapitulos() {
-        $stmt = $this->db->prepare("
-            SELECT * FROM categorias_sesion 
-            WHERE activa = 1 AND es_tematica = 0
-            ORDER BY orden ASC
-        ");
-        $stmt->execute();
-        return $stmt->fetchAll(PDO::FETCH_ASSOC);
-    }
+  public function obtenerCapitulos() {
+    $stmt = $this->db->prepare("
+        SELECT * FROM categorias_sesion 
+        WHERE activa = 1 AND es_tematica = 0 AND es_subcategoria = 0
+        ORDER BY orden ASC
+    ");
+    $stmt->execute();
+    return $stmt->fetchAll(PDO::FETCH_ASSOC);
+}
 
-    public function obtenerTematicas() {
-        $stmt = $this->db->prepare("
-            SELECT * FROM categorias_sesion 
-            WHERE activa = 1 AND es_tematica = 1
-            ORDER BY orden ASC
-        ");
-        $stmt->execute();
-        return $stmt->fetchAll(PDO::FETCH_ASSOC);
-    }
+public function obtenerTematicas() {
+    $stmt = $this->db->prepare("
+        SELECT * FROM categorias_sesion 
+        WHERE activa = 1 AND es_tematica = 1 AND es_subcategoria = 0
+        ORDER BY orden ASC
+    ");
+    $stmt->execute();
+    return $stmt->fetchAll(PDO::FETCH_ASSOC);
+}
 
 
-        public function obtenerPorSlug($slug) {
-        $stmt = $this->db->prepare("
-            SELECT * FROM categorias_sesion 
-            WHERE slug = :slug AND activa = 1
-        ");
-        $stmt->execute([':slug' => $slug]);
-        return $stmt->fetch(PDO::FETCH_ASSOC);
-    }
+       public function obtenerPorSlug($slug) {
+    $stmt = $this->db->prepare("
+        SELECT * FROM categorias_sesion 
+        WHERE slug = :slug
+    ");
+    $stmt->execute([':slug' => $slug]);
+    return $stmt->fetch(PDO::FETCH_ASSOC);
+}
 
 }

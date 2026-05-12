@@ -25,8 +25,17 @@ class GaleriaController {
             exit;
         }
 
-        $fotos = $this->model->obtenerPorCategoria($categoria['id']);
+        // Caso especial para bebés
+        if ($slug === 'bebes') {
+            $cat36   = $this->categoriaModel->obtenerPorSlug('bebes-3-6');
+            $cat69   = $this->categoriaModel->obtenerPorSlug('bebes-6-9');
+            $fotos36 = $cat36 ? $this->model->obtenerPorCategoria($cat36['id']) : [];
+            $fotos69 = $cat69 ? $this->model->obtenerPorCategoria($cat69['id']) : [];
+            require_once __DIR__ . '/../views/sesiones/bebes.php';
+            return;
+        }
 
+        $fotos = $this->model->obtenerPorCategoria($categoria['id']);
         require_once __DIR__ . '/../views/sesiones/' . $slug . '.php';
     }
 }

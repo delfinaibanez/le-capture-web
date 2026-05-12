@@ -16,7 +16,7 @@
     <!-- HERO -->
     <section class="contacto-hero">
         <img class="contacto-hero__img"
-             src="/leCapture_web/le-capture-web/public/img/contacto-hero.jpg"
+             src="/leCapture_web/le-capture-web/public/img/fotografia_contacto.jpg"
              alt="Contacto Le Capture">
         <div class="contacto-hero__overlay"></div>
         <div class="contacto-hero__contenido">
@@ -26,7 +26,7 @@
     </section>
     <!-- INTRO -->
 <div class="contacto-intro">
-    <p>Si querés solicitar información o reservar una sesión, podés contactarme a través del formulario. El estudio funciona solo con cita previa, para asegurarte un espacio tranquilo y dedicado. Tené en cuenta que las tarifas pueden modificarse sin previo aviso, ¡te recomiendo reservar hoy!</p>
+    <p>Si querés solicitar información o reservar una sesión, podés contactarme a través del formulario de esta web o por teléfono. El estudio funciona solo con cita previa, para asegurarte un espacio tranquilo y dedicado. No hace falta que me preguntes por las tarifas: en cada sección de la web vas a encontrar el precio y todos los detalles de cada sesión. Tené en cuenta que las tarifas y características pueden modificarse sin previo aviso, así que si ya lo tenés decidido, ¡te recomiendo reservar hoy y asegurarte los precios actuales!</p>
 </div>
 
 <!-- INFO + FORMULARIO -->
@@ -84,7 +84,7 @@
             <div class="form-grupo">
                 <label for="mensaje">Tu consulta <span>*</span></label>
                 <textarea id="mensaje" name="mensaje" 
-                          placeholder="Contanos sobre la sesión que querés reservar, fecha estimada, cantidad de personas, etc." 
+                          placeholder="Contanos sobre la sesión que querés reservar, fecha estimada  etc." 
                           required></textarea>
             </div>
 
