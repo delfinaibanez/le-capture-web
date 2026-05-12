@@ -53,9 +53,15 @@ public function obtenerTematicas() {
     $stmt = $this->db->prepare("
         SELECT * FROM categorias_sesion 
         WHERE slug = :slug
-    ");
-    $stmt->execute([':slug' => $slug]);
-    return $stmt->fetch(PDO::FETCH_ASSOC);
-}
+        ");
+        $stmt->execute([':slug' => $slug]);
+        return $stmt->fetch(PDO::FETCH_ASSOC);
+    }
+
+    public function obtenerMaxOrden() {
+        $stmt = $this->db->prepare("SELECT MAX(orden) FROM categorias_sesion");
+        $stmt->execute();
+        return (int) $stmt->fetchColumn();
+    }
 
 }

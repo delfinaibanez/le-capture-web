@@ -35,7 +35,22 @@ class GaleriaController {
             return;
         }
 
-        $fotos = $this->model->obtenerPorCategoria($categoria['id']);
-        require_once __DIR__ . '/../views/sesiones/' . $slug . '.php';
+        // Sesiones especiales
+            if ($categoria['es_tematica'] == 1) {
+            require_once __DIR__ . '/../models/SesionEspecialModel.php';
+            $sesionModel = new SesionEspecialModel();
+            $sesion      = $sesionModel->obtenerPorSlug($slug);
+            $fotos       = $this->model->obtenerPorCategoria($categoria['id']);
+            $vista = realpath(__DIR__ . '/../views/sesiones/sesion-especial.php');
+            if (!$vista) {
+                die('Vista no encontrada: ' . __DIR__ . '/../views/sesiones/sesion-especial.php');
+            }
+            require_once $vista;
+            return;
+        }
+
+        $fotos   = $this->model->obtenerPorCategoria($categoria['id']);
+        $archivo = str_replace('-', '_', $slug);
+        require_once __DIR__ . '/../views/sesiones/' . $archivo . '.php';
     }
 }

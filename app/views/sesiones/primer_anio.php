@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="/leCapture_web/le-capture-web/public/css/navbar.css">
     <link rel="stylesheet" href="/leCapture_web/le-capture-web/public/css/sesion.css">
     <link rel="stylesheet" href="/leCapture_web/le-capture-web/public/css/footer.css">
+     <link rel="stylesheet" href="/leCapture_web/le-capture-web/public/css/home.css">
 </head>
 <body>
 
