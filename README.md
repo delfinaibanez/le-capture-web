@@ -164,18 +164,6 @@ en el menú principal.
   <li>Rechazar reseñas</li>
 </ul>
 
-<hr>
-
-<h2>🔐 Datos de Administrador (Desarrollo)</h2>
-
-<p><strong>⚠️ Datos solo para entorno de desarrollo.</strong></p>
-
-<pre>
-Email: candela@lecapture.com
-Contraseña: Admin123!
-</pre>
-
-<hr>
 
 <h2>📧 Configuración Gmail (Token de Aplicación)</h2>
 
