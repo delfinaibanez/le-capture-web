@@ -20,8 +20,7 @@
         <span class="sesion-header__etiqueta">Sesiones</span>
         <h1 class="sesion-header__titulo">Sesión de Recién Nacidos</h1>
         <p class="sesion-header__descripcion">
-            Los primeros días son únicos e irrepetibles. Capturamos esos gestos mínimos, 
-            la piel suave y el amor incondicional que acaba de nacer.
+            Las sesiones de fotos recién nacidos en estudio se realizan durante las primeras dos semanas de vida y suelen durar entre 2 y 3 horas, ya que trabajamos sin apuro, siguiendo siempre el ritmo del bebé. El espacio está preparado para brindar calor, comodidad y seguridad, cuidando cada detalle para que tanto el recién nacido como la familia se sientan relajados. Utilizo poses naturales y accesorios delicados, priorizando siempre el bienestar del bebé para lograr recuerdos únicos y atemporales.
         </p>
     </div>
 
@@ -63,15 +62,14 @@
         </div>
         <div class="packs-grid">
             <div class="pack-card">
-                <div class="pack-card__nombre">Pack Básico</div>
-                <div class="pack-card__precio">$50.000</div>
-                <div class="pack-card__descripcion">Para capturar los primeros momentos de vida</div>
+                <div class="pack-card__nombre">Pack Escencial</div>
+                <div class="pack-card__precio">$126.000</div>
+                <div class="pack-card__descripcion">Para quienes sólo quieren el recuerdo del momento</div>
                 <ul class="pack-card__lista">
-                    <li>Sesión de 1 hora en estudio</li>
-                    <li>10 fotos editadas en alta resolución</li>
-                    <li>Galería digital privada</li>
-                    <li>1 escenario</li>
-                    <li>Accesorios del estudio incluidos</li>
+                    <li>1 Hora de sesión con el bebé envuelto.</li>
+                    <li>8 Fotografías digitales editadas en alta calidad.</li>
+                    <li>Entrega en álbum digital privado.</li>
+                    <li>No incluye fotos familiares</li>
                 </ul>
                 <a href="https://wa.me/5492615788997" target="_blank" class="btn-secundario">Reservar Sesión</a>
             </div>
@@ -79,16 +77,17 @@
             <div class="pack-card destacado">
                 <div class="pack-card__badge">Más Elegido</div>
                 <div class="pack-card__nombre">Pack Premium</div>
-                <div class="pack-card__precio">$85.000</div>
+                <div class="pack-card__precio">$216.000</div>
                 <div class="pack-card__descripcion">La experiencia completa para este momento único</div>
                 <ul class="pack-card__lista">
-                    <li>Sesión de 2 horas en estudio</li>
-                    <li>25 fotos editadas en alta resolución</li>
-                    <li>Galería digital privada</li>
-                    <li>3 escenarios</li>
-                    <li>Accesorios y telas incluidos</li>
-                    <li>Fotos con mamá, papá y hermanos</li>
-                    <li>5 fotos en blanco y negro</li>
+                    <li>2 Horas de sesión con el bebé envuelto y posando.</li>
+                    <li>3 Escenarios (1 del bebé en cama, 1 del bebé en canasto, 1 familiar)</li>
+                    <li>20 Fotografías digitales editadas en alta calidad.</li>
+                    <li>20 Fotografías impresas en 13x18cm calidad laboratorio.</li>
+                    <li>Fotos con mamá, papá, hermanos y hasta 2 abuelos.(Opcional)</li>
+                    <li>Entrega en álbum digital privado.</li>
+                    <li>Entrega en cajita de madera grabada con su nombre.</li>
+                    <li>Envío a domicilio incluído (Válido sólo para el Gran Mendoza). </li> 
                 </ul>
                 <a href="https://wa.me/5492615788997" target="_blank" class="btn-primario">Reservar Sesión</a>
             </div>
@@ -98,16 +97,15 @@
                 <div class="pack-card__precio">$130.000</div>
                 <div class="pack-card__descripcion">La experiencia más completa con recuerdos físicos</div>
                 <ul class="pack-card__lista">
-                    <li>Sesión de 3 horas en estudio</li>
-                    <li>40 fotos editadas en alta resolución</li>
-                    <li>Galería digital privada</li>
-                    <li>5 escenarios</li>
-                    <li>Accesorios, telas y flores incluidos</li>
-                    <li>Fotos familiares incluidas</li>
-                    <li>Álbum premium 20x20cm</li>
-                    <li>10 impresiones fine art</li>
+                  <li>  2 Horas de sesión con el bebé envuelto y posando.</li>
+                  <li>  2 Escenarios (1 del bebé y 1 familiar)</li>
+                  <li>  15 Fotografías digitales editadas en alta calidad.</li>
+                  <li>  15 Fotografías impresas en 13x18 calidad laboratorio.</li>
+                  <li>  Fotos con mamá, papá y hermanos incluídas.</li>
+                  <li>  Entrega en álbum digital privado.</li>
+                  <li>  Entrega en cajita de papel.</li>
+                  <li>  Envío a domicilio incluído (Válido sólo para el Gran Mendoza).</li>
                 </ul>
-                <a href="https://wa.me/5492615788997" target="_blank" class="btn-secundario">Reservar Sesión</a>
             </div>
         </div>
     </section>
@@ -156,19 +154,27 @@
         <div class="faq-lista">
             <div class="faq-item">
                 <button class="faq-pregunta">¿Cuándo es el mejor momento para hacer la sesión?</button>
-                <div class="faq-respuesta">El momento ideal es entre los 5 y 14 días de vida. En esta etapa los bebés duermen más profundo y son más flexibles para las poses.</div>
+                <div class="faq-respuesta">Lo ideal es entre los 10 y 15 días de vida que es cuando aún conservan el sueño profundo y postura fetal.</div>
             </div>
             <div class="faq-item">
-                <button class="faq-pregunta">¿Es seguro para el bebé?</button>
-                <div class="faq-respuesta">Absolutamente. Todas las poses se realizan con total seguridad. Nunca forzamos al bebé y siempre priorizamos su comodidad y bienestar.</div>
+                <button class="faq-pregunta">¿Y si mi bebé tiene más de 15 días?</button>
+                <div class="faq-respuesta">La sesión se hace igual, adaptandose a lo que el bebé puede hacer, sólo se harán fotos boca arriba, en brazos y envuelto.</div>
             </div>
             <div class="faq-item">
-                <button class="faq-pregunta">¿Qué pasa si el bebé llora o necesita comer?</button>
-                <div class="faq-respuesta">Es completamente normal. Hacemos todas las pausas necesarias para que el bebé coma, duerma o se calme. La sesión no tiene apuros.</div>
+                <button class="faq-pregunta">¿Cuándo reservar?</button>
+                <div class="faq-respuesta">Apenas nazca el bebé, cuanto antes mejor</div>
             </div>
             <div class="faq-item">
-                <button class="faq-pregunta">¿Pueden estar mamá y papá en las fotos?</button>
-                <div class="faq-respuesta">¡Por supuesto! Las fotos familiares son parte de la sesión. Es un momento hermoso para capturar juntos.</div>
+                <button class="faq-pregunta">¿Debemos llevar algo especial?</button>
+                <div class="faq-respuesta">Solo lo que el bebé necesite para estar cómodo: pañales, muda de ropa, mantita y leche materna o fórmula si corresponde. El resto lo tenemos en el estudio.</div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-pregunta">¿Cuándo recibiremos las fotos?</button>
+                <div class="faq-respuesta">En un plazo aproximado de 15 a 20 días hábiles, listas para descargar y/o impresas según el paquete contratado.</div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-pregunta">¿Pueden participar tíos o abuelos?</button>
+                <div class="faq-respuesta">Sólo en el pack premium hasta 2 abuelos/as, si quieren incluir mas personas en cualquiera de los packs, se abona un adicional de $10.000 por persona.</div>
             </div>
         </div>
     </section>

@@ -21,12 +21,26 @@
         <span class="sesion-header__etiqueta">Sesiones</span>
         <h1 class="sesion-header__titulo">Sesión de Embarazo</h1>
         <p class="sesion-header__descripcion">
-        Tu embarazo es un momento único, lleno de cambios, ilusión y ternura. En esta sesión busco capturar esa conexión tan especial entre vos, tu bebé y tu familia.
-        Cada detalle está pensado para que te sientas cómoda, tranquila y radiante, en un ambiente cálido y cuidado.
-
-        Podés elegir entre fotos íntimas y delicadas en estudio, o imágenes naturales al aire libre, con luz suave y escenarios que realzan tu esencia.
-        El resultado son recuerdos auténticos, elegantes y atemporales que te acompañarán toda la vida
+         <p>
+        Tu embarazo es un momento único, lleno de cambios, ilusión y ternura. 
+        En esta sesión, mi objetivo es capturar esa <strong>conexión tan especial</strong> 
+        que ya te une con tu bebé y tu familia.
         </p>
+
+    <p>
+        Cada detalle está pensado para que te sientas <strong>cómoda, tranquila y radiante</strong>. 
+        Trabajamos en un ambiente cálido y cuidado, respetando tus tiempos para que la experiencia 
+        sea tan linda como el resultado final.
+    </p>
+
+    <p>
+        Podés elegir el estilo que más te identifique: desde fotografías <strong>íntimas y delicadas en estudio</strong>, 
+        hasta imágenes <strong>naturales al aire libre</strong>, aprovechando la luz suave y escenarios que realzan tu esencia.
+    </p>
+
+    <p>
+        El resultado son recuerdos <strong>auténticos, elegantes y atemporales</strong> que te acompañarán toda la vida.
+    </p>
     </div>
 
     <!-- CARRUSEL -->

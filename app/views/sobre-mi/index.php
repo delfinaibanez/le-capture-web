@@ -24,8 +24,29 @@ $paginaActiva = 'sobre-mi';
                 <div class="intro-content">
                     <span class="tagline">La mirada detrás del lente</span>
                     <h1>Sobre mí</h1>
-                    <p class="featured-text">Me llamo Candela y soy fotógrafa especializada en maternidad, recién nacidos y familias. Mi objetivo es capturar lo que no siempre se ve: los gestos, las miradas y la fuerza de cada historia.</p>
-                    <p>Detrás de cada foto hay mucho más que técnica: está mi amor por lo visual y mi búsqueda constante de la belleza armónica en cada detalle.</p>
+                <p class="featured-text">
+                        Hace más de <strong>10 años</strong> que mi cámara y yo somos inseparables. 
+                        En este camino, tuve el privilegio de fotografiar a más de <strong>500 bebés y familias</strong>, 
+                        formándome profesionalmente en <strong>España</strong> en fotografía de recién nacidos 
+                        y sumando experiencia trabajando también en <strong>Irlanda</strong>.
+                    </p>
+
+                    <p>
+                        <strong>Mi obsesión es la armonía.</strong> Me apasiona que todo lo que nos rodea sea visualmente impecable: 
+                        desde la elección de los accesorios hasta la composición de cada escenografía. Creo firmemente que la vida 
+                        es mucho más linda cuando le sumamos color, dedicación y atención al detalle.
+                    </p>
+
+                    <p>
+                        Me defino como una <em>"licenciada en casi todo"</em> porque la curiosidad me mueve constantemente: 
+                        diseño, decoro, coso y hasta me animo a construir mis propias escenografías 
+                        (aunque la carpintería sea mi próximo gran desafío ).
+                    </p>
+
+                    <p class="about-footer">
+                        Detrás de cada disparo hay mucho más que técnica: está mi amor por lo visual y la convicción de que 
+                        <strong>tus recuerdos merecen ser tan hermosos como la historia que cuentan.</strong>
+                    </p>
                 </div>
                 <div class="intro-image">
                     <img src="/leCapture_web/le-capture-web/public/img/sobre_mi.png" alt="Candela Le Capture">
@@ -69,7 +90,27 @@ $paginaActiva = 'sobre-mi';
             <div class="studio-container">
                 <div class="studio-text-card">
                     <h2>Mi Estudio</h2>
-                    <p>Ubicado en Mendoza, mi espacio está pensado para la comodidad total. Es un refugio luminoso equipado con materiales suaves y tonos neutros para que la fotografía fluya con naturalidad.</p>
+                   <p class="featured-text">
+        Mi estudio es un espacio creado para que las familias se sientan <strong>cómodas desde el primer momento</strong>. 
+        Está pensado como un pequeño refugio: cálido, acogedor y equipado con todo lo necesario para que tu bebé esté 
+        seguro y vos puedas relajarte y disfrutar de la experiencia.
+    </p>
+
+    <p>
+        <strong>Cada rincón está diseñado con cuidado:</strong> la luz, los detalles delicados en la decoración 
+        y los accesorios seleccionados especialmente para cada etapa. Tengo a disposición todo lo necesario 
+        —mantitas, fondos y atrezzo exclusivo— para que no tengas que preocuparte por nada más que disfrutar de la sesión.
+    </p>
+
+    <p>
+        Además, cuento con estrictas <strong>medidas de higiene y seguridad</strong>, porque mi prioridad absoluta 
+        es que cada familia viva esta experiencia con total tranquilidad.
+    </p>
+
+    <p class="studio-footer">
+        Más que un estudio, es un lugar donde los recuerdos comienzan a tomar forma y donde cada sesión 
+        se convierte en una <strong>experiencia especial</strong>.
+    </p>
                 </div>
                 <div class="studio-visuals">
                     <img src="/leCapture_web/le-capture-web/public/img/hero3.png" alt="Estudio Le Capture">

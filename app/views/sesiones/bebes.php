@@ -20,14 +20,14 @@
         <span class="sesion-header__etiqueta">Sesiones</span>
         <h1 class="sesion-header__titulo">Sesión de Bebés</h1>
         <p class="sesion-header__descripcion">
-            Cada etapa de tu bebé es única e irrepetible. Capturo esos gestos, miradas y 
-            detalles que cambian tan rápido, en un ambiente cálido donde toda la familia se 
-            sienta cómoda.
-        </p>
-        <div class="sesion-tabs">
-            <button class="sesion-tab activo" data-tab="3-6">3 a 6 meses</button>
-            <button class="sesion-tab" data-tab="6-9">6 a 9 meses</button>
-        </div>
+           <br>3 Meses: Primeras sonrisas<br>
+            <br>A los tres meses capturamos sus primeras expresiones despiertas y la ternura de sus gestos, justo cuando empiezan a sostener su cabecita y a regalarnos sonrisas más conscientes.<br>
+            <br> 6 a 9 Meses: Sentarse y jugar<br>
+            <br>¡Pura diversión! Es la etapa ideal para fotografiar su espontaneidad: cuando ya se sientan por sí mismos, gatean y descubren el mundo con una alegría contagiosa.<br>
+                    <div class="sesion-tabs">
+                        <button class="sesion-tab activo" data-tab="3-6">3 a 6 meses</button>
+                        <button class="sesion-tab" data-tab="6-9">6 a 9 meses</button>
+                    </div>
     </div>
 
     <!-- SECCIÓN 3-6 MESES -->
@@ -71,39 +71,47 @@
             <div class="packs-grid">
                 <div class="pack-card">
                     <div class="pack-card__nombre">Pack Esencial</div>
-                    <div class="pack-card__precio">$110.000</div>
-                    <div class="pack-card__descripcion">Ideal para capturar los primeros gestos</div>
+                    <div class="pack-card__precio">$120.000</div>
+                    <div class="pack-card__descripcion">Para quienes sólo quieren el recuerdo del momento</div>
                     <ul class="pack-card__lista">
-                        <li>30 min de sesión</li>
-                        <li>1 escenario</li>
-                        <li>8 fotos digitales</li>
-                        <li>Álbum digital</li>
+                        <li>30 Minutos de sesión.</li>
+                        <li>1 Escenario.</li>
+                        <li>8 Fotografías digitales editadas en alta calidad.</li>
+                        <li>Entrega en álbum digital privado.</li>
                     </ul>
                     <a href="https://wa.me/5492615788997" target="_blank" class="btn-secundario">Reservar</a>
                 </div>
                 <div class="pack-card destacado">
                     <div class="pack-card__badge">Más elegido</div>
                     <div class="pack-card__nombre">Pack Premium</div>
-                    <div class="pack-card__precio">$168.000</div>
+                    <div class="pack-card__precio">$178.000</div>
                     <div class="pack-card__descripcion">La experiencia completa para esta etapa</div>
                     <ul class="pack-card__lista">
-                        <li>1 hora de sesión</li>
-                        <li>3 escenarios</li>
-                        <li>20 fotos digitales</li>
-                        <li>Fotos impresas</li>
-                        <li>Álbum digital</li>
+                        <li>1 Horas de sesión.</li>
+                        <li>3 Escenarios (2 para el bebé y uno para fotos familiares)</li>
+                        <li>20 Fotografías digitales editadas en alta calidad.</li>
+                        <li>20 Fotografías impresas en 13x18cm calidad laboratorio.</li>
+                        <li>Fotos con mamá, papá, hermanos y hasta 2 abuelos. (Opcional)</li>
+                        <li>Entrega en álbum digital privado.</li>
+                        <li>Entrega en cajita de madera.</li>
+                        <li>Envío a domicilio incluído (Válido sólo para el Gran Mendoza).</li>
                     </ul>
                     <a href="https://wa.me/5492615788997" target="_blank" class="btn-primario">Reservar</a>
                 </div>
                 <div class="pack-card">
                     <div class="pack-card__nombre">Pack Silver</div>
-                    <div class="pack-card__precio">$196.000</div>
+                    <div class="pack-card__precio">$156.000</div>
                     <div class="pack-card__descripcion">Más tiempo y escenarios para elegir</div>
                     <ul class="pack-card__lista">
-                        <li>1 hora de sesión</li>
-                        <li>2 escenarios</li>
-                        <li>15 fotos digitales</li>
-                        <li>Copia en papel</li>
+                      
+                        <li>1 Horas de sesión.</li>
+                        <li>2 Escenarios diferentes, uno para el bebé y otro para fotos familiares.</li>
+                        <li>15 Fotografías digitales editadas en alta calidad.</li>
+                        <li>15 Fotografías impresas en 13x18 calidad laboratorio.</li>
+                        <li>Fotos con mamá, papá y hermanos incluídas.</li>
+                        <li>Entrega en álbum digital privado.</li>
+                        <li>Entrega en cajita de papel.</li>
+                        <li>Envío a domicilio incluído (Válido sólo para el Gran Mendoza).</li>
                     </ul>
                     <a href="https://wa.me/5492615788997" target="_blank" class="btn-secundario">Reservar</a>
                 </div>
@@ -237,20 +245,29 @@
         </div>
         <div class="faq-lista">
             <div class="faq-item">
-                <button class="faq-pregunta">¿Es necesario que el bebé sostenga la cabeza?</button>
-                <div class="faq-respuesta">Para la sesión de 3 a 6 meses no es necesario. Trabajamos con poses adaptadas a cada etapa del desarrollo. Para la sesión de 6 a 9 meses el bebé ya suele tener más control corporal.</div>
+                <button class="faq-pregunta">¿Por qué es especial hacer fotos a los 3-6 meses?</button>
+                <div class="faq-respuesta">Porque el bebé ya puede levantar y sostener la cabeza, muestra sonrisas más conscientes y se conecta mucho con la cámara y con sus papás.</div>
             </div>
             <div class="faq-item">
-                <button class="faq-pregunta">¿Qué pasa si el bebé llora durante la sesión?</button>
-                <div class="faq-respuesta">¡Es completamente normal! Hacemos pausas para que coma, duerma o simplemente se calme. Trabajamos sin apuros y siempre priorizando el bienestar del bebé.</div>
+                <button class="faq-pregunta">¿Qué tipo de fotos se logran en esta etapa?</button>
+                <div class="faq-respuesta">Se capturan miradas despiertas, sonrisas, expresiones curiosas y también retratos junto a la familia que reflejan ternura y conexión.</div>
             </div>
             <div class="faq-item">
-                <button class="faq-pregunta">¿Qué ropa recomienda llevar?</button>
-                <div class="faq-respuesta">Ropa cómoda y en tonos neutros o pasteles. Evitá estampados muy llamativos. El estudio cuenta con accesorios y prendas para el bebé si lo necesitás.</div>
+                <button class="faq-pregunta">¿Qué debo llevar a la sesión?</button>
+                <div class="faq-respuesta">Sólo lo que el bebé necesite para cuidado personal, ropita facil de sacar y, si quieren pueden llevar algún muñequito u objeto que tenga significado para ustedes</div>
             </div>
             <div class="faq-item">
-                <button class="faq-pregunta">¿Pueden venir mamá y papá en las fotos?</button>
-                <div class="faq-respuesta">¡Por supuesto! Podemos incluir fotos familiares dentro de la misma sesión. Es uno de los momentos más lindos para capturar.</div>
+                <button class="faq-pregunta">¿La sesión incluye vestuario?</button>
+                <div class="faq-respuesta">Por supuesto, tengo muchas opciones de colores y estilos para bebés en todas las edades, también incluye todos los accesorios.</div>
+
+            </div>
+            <div class="faq-item">
+                <button class="faq-pregunta">¿Cuándo recibiremos las fotos?</button>
+                <div class="faq-respuesta">En un plazo aproximado de 15 a 20 días hábiles, listas para descargar y/o impresas según el paquete contratado.</div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-pregunta">¿Pueden participar tíos o abuelos?</button>
+                <div class="faq-respuesta">Sólo en el pack premium hasta 2 abuelos/as, si quieren incluir mas personas en cualquiera de los packs, se abona un adicional de $10.000 por persona.</div>
             </div>
         </div>
     </section>
