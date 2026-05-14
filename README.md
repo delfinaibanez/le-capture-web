@@ -1,81 +1,160 @@
-README - Le Capture Web (Versión 1.0)
+📸 Le Capture - Sistema Web de Gestión Fotográfica
 
-🚀 Alcances del Sistema - Primera Versión
-En esta fase inicial, el sistema funciona como un gestor de contenidos (CMS) para centralizar la imagen de la marca y facilitar el contacto con los clientes.
+Sistema web desarrollado para el estudio fotográfico Le Capture, orientado a la gestión de contenido, sesiones especiales y administración del sitio mediante un panel administrativo.
 
-Gestión de Turnos: Se realiza exclusivamente mediante redirección a WhatsApp personal.
+✨ Descripción
 
-Acceso Público: Los clientes no necesitan registrarse para navegar ni para solicitar turnos.
+La plataforma permite mostrar información del estudio, galerías, sesiones fotográficas y contenido dinámico administrado por Candela desde un panel de administración.
 
-Rol de Usuario: Único perfil de Administrador (acceso total al panel).
+Actualmente el sistema se encuentra en desarrollo y esta documentación corresponde a la Primera Versión (V1).
 
-Seguridad: En esta versión, la contraseña de administrador es fija (no modificable desde el panel).
+🚧 Estado del Proyecto
 
-Estructura: Las temáticas de sesiones principales son fijas; no se permite la creación de nuevas temáticas globales desde el panel.
+⚠️ Proyecto en desarrollo.
 
-🛠️ Requisitos Funcionales (Panel Administrador)
-El administrador (Candela) puede realizar las siguientes acciones:
+Actualmente faltan funcionalidades como:
 
-Galería: Cargar y organizar fotos por categorías. Controlar qué fotos y cuántas se muestran en la galería principal.
+Integración completa con base de datos
+Sistema de autenticación avanzada
+Registro de usuarios
+Gestión completa de turnos desde el sistema
+Responsive final en algunos módulos
+🛠️ Tecnologías Utilizadas
+HTML5
+CSS3
+JavaScript
+PHP
+MySQL (pendiente integración completa)
+WAMP / XAMPP
+📌 Alcances del Sistema — Primera Versión
+Sistema de turnos
 
-Blog: Crear posts (título, descripción, imagen). Seleccionar los 3 posts principales para el menú de inicio.
+Actualmente el sistema:
 
-Contacto: Recibir las consultas realizadas en la web directamente en su Gmail.
+Redirige automáticamente al WhatsApp personal para solicitar turnos
+No requiere registro de usuarios
+No posee sistema interno de reservas todavía
+Mejoras futuras
+Sistema completo de reservas
+Calendario de disponibilidad
+Registro e inicio de sesión de clientes
+👤 Roles del Sistema
+Administrador
 
-Sesiones Especiales: Gestión completa (CRUD):
+Único rol disponible en la primera versión.
 
-Crear nuevas categorías de sesiones especiales.
+Restricciones actuales
+Candela no podrá cambiar la contraseña desde el sistema
+Candela no podrá crear nuevas temáticas generales
+Las temáticas disponibles quedan predefinidas
+⚙️ Funcionalidades del Panel Administrador
+📷 Gestión de Galería
 
-Definir títulos, fechas, descripciones, imágenes y videos.
+Candela podrá:
 
-Gestionar FAQs y galerías específicas para cada sesión.
+Subir fotos por categoría
+Elegir qué fotos se muestran en la galería principal
+Definir la cantidad máxima de imágenes visibles
+📝 Gestión del Blog
 
-Actualizar, editar o eliminar cupos y sesiones.
+Candela podrá:
 
-Reseñas: Sistema de moderación para aceptar o rechazar los comentarios de los clientes antes de que se publiquen.
+Crear publicaciones
+Editar publicaciones
+Eliminar publicaciones
 
-🗄️ Estructura de Base de Datos
-(Sección en desarrollo - Pendiente de actualización conforme se finalice el esquema técnico de tablas y relaciones)
+Cada post incluye:
 
-🔐 Configuración de Acceso y Correo
-Datos del Administrador:
+Título
+Descripción
+Imagen opcional
+
+Además:
+
+Puede seleccionar los 3 posts principales que aparecerán destacados en el menú principal
+💌 Área de Contacto
+
+El sistema permitirá:
+
+Recibir consultas vía Gmail
+Integración mediante token de aplicación de Google
+🎉 Gestión de Sesiones Especiales
+
+Candela podrá:
+
+Crear nuevas categorías de sesiones especiales
+Editar sesiones
+Eliminar sesiones
+Actualizar cupos disponibles
+
+Cada sesión podrá incluir:
+
+Título
+Fecha
+Descripción
+Imagen
+Video
+Preguntas
+Galería
+⭐ Gestión de Reseñas
+
+Candela podrá:
+
+Aprobar reseñas
+Rechazar reseñas
+🔐 Datos de Administrador (Desarrollo)
+
+⚠️ Datos solo para entorno de desarrollo.
+
 Email: candela@lecapture.com
-
 Contraseña: Admin123!
+📧 Configuración Gmail (Token de Aplicación)
 
-Configuración SMTP (Gmail):
-Para habilitar el envío de consultas al correo, seguir estos pasos:
+Para utilizar el área de contacto:
 
-Ingresar a Google Account Security.
+Ingresar a:
 
-Activar la Verificación en dos pasos.
+https://myaccount.google.com/security
 
-Ir a Contraseñas de aplicaciones.
+Activar:
 
-Generar un nuevo token para "Correo" y pegarlo en la configuración del sistema.
+Verificación en dos pasos
 
-📋 Tareas Pendientes (Roadmap)
-Modificaciones Visuales y UX:
-Unificar el CSS del footer (actualmente en home.css) a footer.css.
+Luego ingresar a:
 
-Ajustar el hover sólido en los botones principales.
+https://myaccount.google.com/apppasswords
 
-Corregir textos de "Embarazo" y revisar enlaces en el Navbar.
+Generar un token de aplicación para el sistema
+📱 Mejoras y Ajustes Pendientes
+Ajustes Generales
+Mejorar hover principal con color sólido
+Enlazar texto “Sobre mí” con su página
+Corregir texto de sección embarazo
+Revisar enlaces del navbar
+Separar correctamente estilos del footer
+Restringir cantidad máxima de fotos seleccionables
+Responsive del panel administrador
+Agregar cuotas a los packs
+Mejorar responsive móvil y desktop
+Crear recuadro para horarios de atención
+Modificar emojis del sistema
+Agregar bordes blancos a carruseles
+Mejoras Importantes
+Agregar sesiones especiales al feed principal
+Crear página de sesiones temáticas
+Crear página de cumpleaños
+Agregar categoría de sesiones temáticas al Home
+Mostrar cantidad de fotos en galería desde admin
+Eliminar sección “Consultas nuevas” si se utiliza solo WhatsApp/Gmail
 
-Optimización Responsive completa (móviles y computadoras).
+📌 Notas
 
-Agregar marco blanco a los carruseles de las páginas.
+Este proyecto fue desarrollado como sistema personalizado para un emprendimiento fotográfico.
 
-Mejoras Funcionales Importantes:
-Validación de Galería: Restricción para no exceder el tope de fotos permitido en el panel.
-
-Nuevas Secciones: Desarrollar las páginas de "Sesiones Temáticas" y "Cumpleaños".
-
-Integración: Sumar las Sesiones Especiales al feed principal de la sección "Sobre Mí".
-
-Precios: Actualizar los packs con sistema de cuotas y precios actualizados para infantiles.
+La arquitectura y funcionalidades irán evolucionando en futuras versiones.
 
 vista 
 <img width="1334" height="613" alt="image" src="https://github.com/user-attachments/assets/7dacb77f-2806-4c82-a069-29fa4bf28cfa" />
 
-Desarrollado por: Delfina Ibañez
+Autor: Delfina 
+
