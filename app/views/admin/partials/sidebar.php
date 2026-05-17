@@ -12,6 +12,10 @@ $seccionActiva = $seccionActiva ?? '';
             class="<?= ($seccionActiva ?? '') === 'sesiones-especiales' ? 'activo' : '' ?>">
                 Ses. Especiales
         </a>
+        <a href="/leCapture_web/le-capture-web/admin/tematicas"
+        class="<?= ($seccionActiva ?? '') === 'tematicas' ? 'activo' : '' ?>">
+            Temáticas
+        </a>
     </nav>
     <div class="cerrar">
         <a href="/leCapture_web/le-capture-web/admin/logout">Cerrar sesión</a>

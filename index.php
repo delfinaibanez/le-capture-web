@@ -13,7 +13,6 @@ $script_name = dirname($_SERVER['SCRIPT_NAME']);
 $url = str_replace($script_name, '', $_SERVER['REQUEST_URI']);
 $url = trim($url, '/');
 
-// Sacar query string si existe
 if (strpos($url, '?') !== false) {
     $url = strstr($url, '?', true);
 }
@@ -57,6 +56,11 @@ if ($controlador === '' || $controlador === 'inicio') {
     require_once __DIR__ . '/app/controllers/InicioController.php';
     $c = new InicioController();
     $c->sobreMi();
+
+} elseif ($controlador === 'tematicas') {
+    require_once __DIR__ . '/app/controllers/TematicaController.php';
+    $c = new TematicaController();
+    $c->index();
 
 // ─────────────────────────────────────────
 // RUTAS DEL ADMIN
@@ -111,9 +115,7 @@ if ($controlador === '' || $controlador === 'inicio') {
         elseif ($sub === 'eliminar')   $c->eliminar($partes[3] ?? null);
         else                           $c->index();
 
-    } 
-    
-        elseif ($accion === 'sesiones-especiales') {
+    } elseif ($accion === 'sesiones-especiales') {
         AdminController::verificarSesion();
         require_once __DIR__ . '/app/controllers/SesionEspecialAdminController.php';
         $c = new SesionEspecialAdminController();
@@ -123,10 +125,21 @@ if ($controlador === '' || $controlador === 'inicio') {
         elseif ($sub === 'editar')     $c->editar($partes[3] ?? null);
         elseif ($sub === 'actualizar') $c->actualizar($partes[3] ?? null);
         elseif ($sub === 'eliminar')   $c->eliminar($partes[3] ?? null);
-        else                           $c->index();}
-    
-    
-    elseif ($accion === 'navbar') {
+        else                           $c->index();
+
+    } elseif ($accion === 'tematicas') {
+        AdminController::verificarSesion();
+        require_once __DIR__ . '/app/controllers/TematicaAdminController.php';
+        $c = new TematicaAdminController();
+        $sub = $partes[2] ?? '';
+        if ($sub === 'nueva')          $c->nueva();
+        elseif ($sub === 'guardar')    $c->guardar();
+        elseif ($sub === 'editar')     $c->editar($partes[3] ?? null);
+        elseif ($sub === 'actualizar') $c->actualizar($partes[3] ?? null);
+        elseif ($sub === 'eliminar')   $c->eliminar($partes[3] ?? null);
+        else                           $c->index();
+
+    } elseif ($accion === 'navbar') {
         AdminController::verificarSesion();
         require_once __DIR__ . '/app/controllers/NavbarAdminController.php';
         $c = new NavbarAdminController();
