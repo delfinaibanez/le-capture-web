@@ -253,6 +253,21 @@
     .navbar__hamburguesa { display: flex; }
 }
 
+@media (max-width: 540px) {
+    .navbar__inner {
+        gap: 14px;
+        padding: 0 16px;
+    }
+
+    .navbar__logo::after {
+        display: none;
+    }
+
+    .navbar__hamburguesa span {
+        width: 18px;
+    }
+}
+
 /* ─────────────────────────────────────────
    DROPDOWN MOBILE
 ───────────────────────────────────────── */

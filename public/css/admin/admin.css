@@ -393,3 +393,265 @@ input[type=file] {
     gap: 12px;
     flex-wrap: wrap;
 }
+
+@media (max-width: 1024px) {
+    .sidebar {
+        position: relative;
+        width: 100%;
+        height: auto;
+        box-shadow: none;
+    }
+
+    .contenido {
+        margin-left: 0;
+        padding: 28px 20px 40px;
+    }
+
+    .cabecera {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+}
+
+@media (max-width: 640px) {
+    .sidebar nav a {
+        padding: 12px 18px;
+    }
+
+    .contenido {
+        padding: 20px 16px;
+    }
+
+    .btn {
+        width: 100%;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 420px) {
+    .sidebar {
+        padding: 20px 0;
+    }
+
+    .sidebar .logo {
+        font-size: 16px;
+        padding: 0 16px 16px;
+    }
+
+    .sidebar nav {
+        padding: 12px 0;
+    }
+
+    .sidebar nav a {
+        padding: 10px 14px;
+        font-size: 12px;
+    }
+
+    .contenido {
+        padding: 16px 12px;
+    }
+
+    .cabecera {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+        margin-bottom: 20px;
+    }
+
+    .cabecera h1 {
+        font-size: 20px;
+    }
+
+    .btn {
+        width: 100%;
+        padding: 10px 12px;
+        font-size: 13px;
+        border-radius: 6px;
+    }
+
+    /* TABLAS RESPONSIVAS */
+    table {
+        font-size: 12px;
+        border-radius: 8px;
+    }
+
+    th {
+        padding: 10px 12px;
+        font-size: 11px;
+    }
+
+    td {
+        padding: 10px 12px;
+        font-size: 12px;
+    }
+
+    .acciones a {
+        font-size: 11px;
+        margin-right: 6px;
+    }
+
+    /* FORMULARIOS */
+    label {
+        font-size: 12px;
+        margin-top: 14px;
+        margin-bottom: 4px;
+    }
+
+    input[type=text],
+    input[type=email],
+    input[type=password],
+    input[type=number],
+    input[type=file],
+    textarea,
+    select {
+        padding: 8px 10px;
+        font-size: 13px;
+        border-radius: 6px;
+    }
+
+    textarea {
+        min-height: 200px;
+    }
+
+    .preview img {
+        max-width: 150px;
+        margin-top: 8px;
+    }
+
+    .checks {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .checks label {
+        gap: 6px;
+        font-size: 12px;
+    }
+
+    /* ALERTAS */
+    .error,
+    .exito {
+        padding: 8px 12px;
+        font-size: 12px;
+        margin-bottom: 16px;
+    }
+
+    /* TARJETAS DASHBOARD */
+    .tarjetas {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        margin-bottom: 24px;
+    }
+
+    .tarjeta {
+        padding: 18px;
+    }
+
+    .tarjeta .numero {
+        font-size: 24px;
+    }
+
+    .tarjeta .etiqueta {
+        font-size: 12px;
+        margin-top: 8px;
+    }
+
+    /* ACCESOS */
+    .accesos h2 {
+        font-size: 14px;
+        margin-bottom: 12px;
+    }
+
+    .accesos .botones {
+        flex-direction: column;
+        gap: 8px;
+    }
+
+    .accesos .botones a {
+        width: 100%;
+        padding: 8px 12px;
+        font-size: 12px;
+        text-align: center;
+    }
+
+    /* GALERÍA ADMIN */
+    .grid-fotos {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+    }
+
+    .foto-card img {
+        height: 100px;
+    }
+
+    .foto-card .foto-info {
+        padding: 6px;
+        flex-direction: column;
+        gap: 4px;
+    }
+
+    .foto-card .foto-info label,
+    .foto-card .foto-info span,
+    .foto-card .foto-info a {
+        font-size: 10px;
+    }
+
+    .categoria-titulo {
+        font-size: 14px;
+        margin-bottom: 12px;
+        padding-bottom: 6px;
+    }
+
+    .sin-fotos {
+        font-size: 12px;
+        margin-bottom: 16px;
+    }
+
+    /* CONFIG PANEL */
+    .config-panel {
+        padding: 12px 14px !important;
+        margin-bottom: 16px !important;
+    }
+
+    .config-panel label {
+        font-size: 12px;
+    }
+
+    .config-panel input {
+        width: 60px;
+        padding: 6px 8px;
+        font-size: 12px;
+    }
+
+    .config-panel p {
+        font-size: 11px;
+        margin-top: 6px;
+    }
+
+    #foto-limite-mensaje {
+        font-size: 11px !important;
+        margin-top: 4px !important;
+    }
+
+    /* CARD */
+    .card {
+        padding: 18px;
+        border-radius: 8px;
+    }
+
+    /* ACCIONES FORM */
+    .acciones-form {
+        flex-direction: column;
+        gap: 8px;
+        margin-top: 16px;
+    }
+
+    .acciones-form a,
+    .acciones-form button {
+        width: 100%;
+        padding: 10px 12px;
+        font-size: 13px;
+    }
+}

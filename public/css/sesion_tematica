@@ -1,0 +1,56 @@
+* ─────────────────────────────────────────
+   SECCIÓN TEMÁTICAS
+───────────────────────────────────────── */
+.sesion-tematicas {
+    padding: 80px 24px;
+    background: var(--color-fondo);
+}
+ 
+/* Override: fuerza 3 columnas en lugar del auto-fit de sesion.css */
+.sesion-tematicas .tematicas-grid {
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 1100px;
+    margin: 0 auto 28px;
+}
+ 
+/* Asegura que las cards tengan ratio 4:3 en esta página */
+.sesion-tematicas .tematica-card {
+    aspect-ratio: 4 / 3;
+    min-height: unset;
+    border-radius: 16px;
+}
+ 
+/* Hover lift */
+.sesion-tematicas .tematica-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(0,0,0,0.18);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+ 
+ 
+/* ─────────────────────────────────────────
+   SECCIÓN AMBIENTACIÓN
+───────────────────────────────────────── */
+.seccion-ambientacion {
+    padding: 80px 24px;
+    background: var(--color-fondo-alt);
+}
+ 
+/* ─────────────────────────────────────────
+   RESPONSIVE ESPECÍFICO
+───────────────────────────────────────── */
+@media (max-width: 900px) {
+    .sesion-tematicas .tematicas-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+ 
+@media (max-width: 560px) {
+    .sesion-tematicas .tematicas-grid {
+        grid-template-columns: 1fr;
+    }
+ 
+    .sesion-tematicas .tematica-card {
+        aspect-ratio: 3 / 2;
+    }
+}

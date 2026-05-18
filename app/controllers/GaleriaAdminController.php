@@ -36,6 +36,10 @@ class GaleriaAdminController {
         $maxFotos     = intval($_POST['max_mostrar'] ?? 6);
         $maxFotos     = max(1, min($maxFotos, 10));
 
+        if (count($visibleFotos) > $maxFotos) {
+            $visibleFotos = array_slice($visibleFotos, 0, $maxFotos);
+        }
+
         $config = [
             'visible'  => $visibleFotos,
             'maxFotos' => $maxFotos,

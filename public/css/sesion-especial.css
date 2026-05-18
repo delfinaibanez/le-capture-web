@@ -455,3 +455,306 @@
 
     .se-video__polaroid { transform: none; }
 }
+
+@media (max-width: 420px) {
+    .se-hero {
+        min-height: 90vh;
+        margin-top: 60px;
+    }
+
+    .se-hero__inner {
+        padding: 40px 16px;
+    }
+
+    .se-hero__tarjeta {
+        inset: 8px;
+    }
+
+    .se-hero__badge {
+        font-size: 0.65rem;
+        padding: 4px 14px;
+        margin-bottom: 16px;
+    }
+
+    .se-hero__titulo {
+        font-size: clamp(1.8rem, 4vw, 2.8rem);
+        margin-bottom: 12px;
+    }
+
+    .se-hero__subtitulo {
+        font-size: 0.95rem;
+        margin-bottom: 14px;
+    }
+
+    .se-hero__descripcion {
+        font-size: 0.85rem;
+        line-height: 1.7;
+        margin-bottom: 24px;
+    }
+
+    .se-btn-reservar {
+        width: 100%;
+        padding: 12px 24px;
+        font-size: 0.82rem;
+        margin-bottom: 12px;
+    }
+
+    .se-cupos {
+        font-size: 0.75rem;
+        margin-top: 6px;
+    }
+
+    /* COUNTDOWN */
+    .se-countdown {
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+        margin-bottom: 24px;
+    }
+
+    .se-countdown__num {
+        font-size: 1.8rem;
+    }
+
+    .se-countdown__label {
+        font-size: 0.6rem;
+        margin-top: 4px;
+    }
+
+    /* VIDEO */
+    .se-video {
+        padding: 60px 16px;
+    }
+
+    .se-video__inner {
+        max-width: 100%;
+    }
+
+    .se-video__etiqueta {
+        font-size: 0.65rem;
+        margin-bottom: 10px;
+    }
+
+    .se-video__inner h2 {
+        font-size: 1.6rem;
+        margin-bottom: 24px;
+    }
+
+    .se-video__polaroid {
+        padding: 12px 12px 36px;
+    }
+
+    /* GALERÍA */
+    .se-galeria {
+        padding: 60px 16px;
+    }
+
+    .se-galeria__etiqueta {
+        font-size: 0.65rem;
+        margin-bottom: 10px;
+    }
+
+    .se-galeria h2 {
+        font-size: 1.6rem;
+        margin-bottom: 24px;
+    }
+
+    .se-galeria__grid {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 8px;
+        max-width: 100%;
+    }
+
+    .se-galeria__foto {
+        border-radius: 6px;
+    }
+
+    .se-galeria__foto img {
+        height: 140px;
+    }
+
+    .se-galeria__foto--grande {
+        grid-column: span 2;
+    }
+
+    .se-galeria__foto--grande img {
+        height: 160px;
+    }
+
+    /* POR QUÉ ES ESPECIAL */
+    .se-porque {
+        padding: 60px 16px;
+    }
+
+    .se-porque__etiqueta {
+        font-size: 0.65rem;
+        margin-bottom: 10px;
+    }
+
+    .se-porque__inner h2 {
+        font-size: 1.6rem;
+        margin-bottom: 32px;
+    }
+
+    .se-porque__grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .se-porque__item {
+        padding: 20px 16px;
+        border-radius: 12px;
+    }
+
+    .se-porque__icono {
+        width: 36px;
+        height: 36px;
+        font-size: 0.95rem;
+        margin-bottom: 12px;
+    }
+
+    .se-porque__item h3 {
+        font-size: 1rem;
+        margin-bottom: 8px;
+    }
+
+    .se-porque__item p {
+        font-size: 0.82rem;
+        line-height: 1.6;
+    }
+
+    /* ESCENOGRAFÍA */
+    .se-escenografia {
+        padding: 60px 16px;
+    }
+
+    .se-escenografia__inner {
+        max-width: 100%;
+    }
+
+    .se-escenografia__foto img {
+        border-radius: 8px;
+    }
+
+    /* PACKS */
+    .se-packs {
+        padding: 60px 16px;
+    }
+
+    .se-packs__inner {
+        max-width: 100%;
+    }
+
+    .se-packs__etiqueta {
+        font-size: 0.65rem;
+        margin-bottom: 10px;
+    }
+
+    .se-packs__inner h2 {
+        font-size: 1.6rem;
+        margin-bottom: 32px;
+    }
+
+    .packs-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .pack-card {
+        padding: 24px 16px;
+        border-radius: 12px;
+    }
+
+    .pack-card__badge {
+        top: -10px;
+        font-size: 0.65rem;
+        padding: 4px 12px;
+    }
+
+    .pack-card__nombre {
+        font-size: 1.3rem;
+        margin-bottom: 6px;
+    }
+
+    .pack-card__precio {
+        font-size: 1.5rem;
+        margin-bottom: 6px;
+    }
+
+    .pack-card__descripcion {
+        font-size: 0.8rem;
+        margin-bottom: 16px;
+    }
+
+    .pack-card__lista {
+        margin-bottom: 16px;
+    }
+
+    .pack-card__lista li {
+        font-size: 0.8rem;
+        padding: 6px 0;
+    }
+
+    .pack-card__cuotas {
+        font-size: 0.75rem;
+        margin-top: 12px;
+    }
+
+    .btn-primario,
+    .btn-secundario {
+        width: 100%;
+        padding: 11px 16px;
+        font-size: 0.8rem;
+    }
+
+    /* FAQ */
+    .sesion-faq {
+        padding: 60px 16px;
+    }
+
+    .sesion-faq__titulo span {
+        font-size: 0.65rem;
+        margin-bottom: 8px;
+    }
+
+    .sesion-faq__titulo h2 {
+        font-size: 1.6rem;
+        margin-bottom: 24px;
+    }
+
+    .faq-pregunta {
+        font-size: 0.9rem;
+        padding: 12px 12px;
+    }
+
+    .faq-respuesta {
+        font-size: 0.82rem;
+        line-height: 1.6;
+    }
+
+    /* CTA FINAL */
+    .se-cta {
+        min-height: 380px;
+    }
+
+    .se-cta__tarjeta {
+        inset: 8px;
+    }
+
+    .se-cta__inner {
+        padding: 50px 16px;
+    }
+
+    .se-cta__inner h2 {
+        font-size: clamp(1.4rem, 3vw, 2rem);
+        margin-bottom: 12px;
+    }
+
+    .se-cta__inner p {
+        font-size: 0.82rem;
+        margin-bottom: 20px;
+    }
+}

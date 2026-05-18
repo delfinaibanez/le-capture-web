@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="/leCapture_web/le-capture-web/public/css/navbar.css">
     <link rel="stylesheet" href="/leCapture_web/le-capture-web/public/css/sesion.css">
     <link rel="stylesheet" href="/leCapture_web/le-capture-web/public/css/home.css">
+     <link rel="stylesheet" href="/leCapture_web/le-capture-web/public/css/sesion_tematica.css">
     <link rel="stylesheet" href="/leCapture_web/le-capture-web/public/css/footer.css">
 </head>
 <body>
@@ -133,6 +134,7 @@
                     <li>Edición básica</li>
                 </ul>
                 <a href="https://wa.me/5492615788997" target="_blank" class="btn-primario">Reservar sesión</a>
+                <p class="pack-card__cuotas">Hasta 12 cuotas sin interés</p>
             </div>
             <div class="pack-card destacado">
                 <div class="pack-card__badge">Pack Premium</div>
@@ -146,6 +148,7 @@
                     <li>Mini álbum digital</li>
                 </ul>
                 <a href="https://wa.me/5492615788997" target="_blank" class="btn-primario">Reservar sesión</a>
+                <p class="pack-card__cuotas">Hasta 12 cuotas sin interés</p>
             </div>
             <div class="pack-card">
                 <div class="pack-card__badge">Pack Deluxe</div>
@@ -159,6 +162,7 @@
                     <li>Impresiones y álbum digital</li>
                 </ul>
                 <a href="https://wa.me/5492615788997" target="_blank" class="btn-primario">Reservar sesión</a>
+                <p class="pack-card__cuotas">Hasta 12 cuotas sin interés</p>
             </div>
         </div>
     </section>

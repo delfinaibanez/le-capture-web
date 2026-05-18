@@ -137,3 +137,94 @@
         }
 
         .accesos .botones a:hover { background: #b07d62; }
+
+        @media (max-width: 1024px) {
+            .sidebar {
+                position: relative;
+                width: 100%;
+                height: auto;
+                padding: 20px 0;
+            }
+
+            .contenido {
+                margin-left: 0;
+                padding: 24px 20px;
+            }
+        }
+
+        @media (max-width: 420px) {
+            .sidebar .logo {
+                font-size: 14px;
+                padding: 0 14px 14px;
+            }
+
+            .sidebar nav {
+                padding: 12px 0;
+            }
+
+            .sidebar nav a {
+                padding: 10px 12px;
+                font-size: 12px;
+            }
+
+            .sidebar .cerrar {
+                padding: 14px;
+            }
+
+            .sidebar .cerrar a {
+                font-size: 12px;
+            }
+
+            .contenido {
+                padding: 14px 10px;
+            }
+
+            .bienvenida {
+                margin-bottom: 20px;
+            }
+
+            .bienvenida h1 {
+                font-size: 18px;
+            }
+
+            .bienvenida p {
+                font-size: 12px;
+            }
+
+            .tarjetas {
+                grid-template-columns: 1fr;
+                gap: 12px;
+                margin-bottom: 24px;
+            }
+
+            .tarjeta {
+                padding: 14px;
+                border-radius: 8px;
+            }
+
+            .tarjeta .numero {
+                font-size: 24px;
+            }
+
+            .tarjeta .etiqueta {
+                font-size: 11px;
+                margin-top: 4px;
+            }
+
+            .accesos h2 {
+                font-size: 14px;
+                margin-bottom: 12px;
+            }
+
+            .accesos .botones {
+                flex-direction: column;
+                gap: 8px;
+            }
+
+            .accesos .botones a {
+                width: 100%;
+                padding: 10px 12px;
+                font-size: 12px;
+                text-align: center;
+            }
+        }

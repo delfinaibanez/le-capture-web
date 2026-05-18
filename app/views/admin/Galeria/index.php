@@ -83,6 +83,7 @@
                 <label for="max_mostrar" style="display:block; font-size:14px; margin-bottom:8px; color:#555;">Cantidad de fotos que se mostrarán en momentos captados</label>
                 <input type="number" id="max_mostrar" name="max_mostrar" value="<?= htmlspecialchars($config['maxFotos'] ?? 6) ?>" min="1" max="10" style="width:100px; padding:10px 12px; border:1px solid #ddd; border-radius:8px;" />
                 <p style="font-size:13px; color:#777; margin-top:10px;">Seleccioná las fotos que querés mostrar en la grilla principal de la página de inicio. Máximo 10 fotos.</p>
+                <p id="foto-limite-mensaje" style="font-size:13px; color:#b07d62; margin-top:8px; display:none;"></p>
             </div>
             <?php foreach ($categorias as $cat): ?>
                 <div class="categoria-titulo"><?= htmlspecialchars($cat['nombre']) ?></div>
@@ -118,5 +119,49 @@
         </form>
 
     </main>
+
+    <script>
+        (function() {
+            const maxInput = document.getElementById('max_mostrar');
+            const mensaje = document.getElementById('foto-limite-mensaje');
+            const checkboxes = Array.from(document.querySelectorAll('input[name="fotos_visible[]"]'));
+
+            function actualizarLimite() {
+                const max = Math.max(1, Math.min(parseInt(maxInput.value, 10) || 1, 10));
+                let seleccionadas = checkboxes.filter(cb => cb.checked);
+
+                if (seleccionadas.length > max) {
+                    seleccionadas.slice(max).forEach(cb => cb.checked = false);
+                    seleccionadas = checkboxes.filter(cb => cb.checked);
+                }
+
+                const contador = seleccionadas.length;
+
+                if (contador >= max) {
+                    checkboxes
+                        .filter(cb => !cb.checked)
+                        .forEach(cb => cb.disabled = true);
+                } else {
+                    checkboxes.forEach(cb => cb.disabled = false);
+                }
+
+                if (contador > max) {
+                    mensaje.textContent = `Solo podés mostrar ${max} fotos. Se guardarán las primeras ${max} seleccionadas.`;
+                    mensaje.style.display = 'block';
+                } else {
+                    mensaje.style.display = 'none';
+                }
+            }
+
+            maxInput.addEventListener('input', function() {
+                if (parseInt(this.value, 10) < 1) this.value = 1;
+                if (parseInt(this.value, 10) > 10) this.value = 10;
+                actualizarLimite();
+            });
+
+            checkboxes.forEach(cb => cb.addEventListener('change', actualizarLimite));
+            actualizarLimite();
+        })();
+    </script>
 </body>
 </html>

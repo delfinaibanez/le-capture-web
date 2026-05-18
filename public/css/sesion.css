@@ -371,6 +371,29 @@
     }
 }
 
+@media (max-width: 640px) {
+    .sesion-packs {
+        padding: 70px 18px;
+    }
+
+    .pack-card {
+        padding: 28px 20px;
+    }
+
+    .pack-card__nombre {
+        font-size: 1.4rem;
+    }
+
+    .pack-card__precio {
+        font-size: 1.8rem;
+    }
+
+    .sesion-cta__acciones {
+        flex-direction: column;
+        gap: 14px;
+    }
+}
+
 .pack-card {
     border: 1.5px solid #e8e0d8;
     border-radius: 16px;
@@ -449,6 +472,12 @@
     color: var(--color-acento);
     font-weight: 700;
     flex-shrink: 0;
+}
+
+.pack-card__cuotas {
+    margin-top: 14px;
+    font-size: 0.88rem;
+    color: var(--color-texto-suave);
 }
 
 /* ─────────────────────────────────────────
