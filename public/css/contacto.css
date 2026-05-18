@@ -487,3 +487,96 @@
         height: 320px;
     }
 }
+
+.pagina-resenas {
+    padding: 80px 24px 120px;
+    background: var(--color-fondo-alt);
+}
+
+.pagina-resenas .contenedor {
+    max-width: 1120px;
+    margin: 0 auto;
+}
+
+.pagina-resenas .seccion-titulo {
+    text-align: left;
+    max-width: 720px;
+    margin-bottom: 42px;
+}
+
+.pagina-resenas__grid {
+    display: grid;
+    grid-template-columns: minmax(280px, 1fr) minmax(320px, 1.05fr);
+    gap: 32px;
+}
+
+.pagina-resenas .contacto-form {
+    padding: 42px 36px;
+    border-radius: 28px;
+    min-height: 520px;
+}
+
+.resenas-listado h2 {
+    font-size: 2rem;
+    margin-bottom: 26px;
+    color: var(--color-texto);
+}
+
+.resenas-listado .resenas__grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 24px;
+}
+
+.resena-card {
+    position: relative;
+    background: var(--color-blanco);
+    border-radius: 28px;
+    padding: 36px 30px;
+    border: 1px solid rgba(195,170,146,0.16);
+    box-shadow: 0 20px 50px rgba(92,69,57,0.08);
+    overflow: hidden;
+}
+
+.resena-card::before {
+    content: "“";
+    position: absolute;
+    top: 22px;
+    right: 22px;
+    font-size: 4.8rem;
+    color: rgba(176,125,98,0.14);
+    font-family: Georgia, serif;
+}
+
+.resena-card__texto {
+    margin: 0 0 24px;
+    color: #5b4b41;
+    line-height: 1.9;
+    font-size: 1rem;
+}
+
+.resena-card__separador {
+    height: 1px;
+    background: rgba(224,204,187,0.45);
+    margin-bottom: 24px;
+}
+
+.resena-card__autor {
+    display: block;
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #3f3229;
+    margin-bottom: 8px;
+}
+
+.resena-card__meta {
+    display: block;
+    font-size: 0.82rem;
+    color: #8a7c6c;
+}
+
+.resenas-listado__sin-resenas {
+    color: #7f6e62;
+    font-size: 0.95rem;
+    line-height: 1.8;
+}

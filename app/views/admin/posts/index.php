@@ -10,18 +10,7 @@
     <link rel="stylesheet" href="/leCapture_web/le-capture-web/public/css/admin/admin.css">
 </head>
 <body>
-    <aside class="sidebar">
-        <div class="logo">Le Capture</div>
-        <nav>
-            <a href="/leCapture_web/le-capture-web/admin/dashboard">Inicio</a>
-            <a href="/leCapture_web/le-capture-web/admin/posts" class="activo">Blog</a>
-            <a href="/leCapture_web/le-capture-web/admin/galeria">Galería</a>
-            <a href="/leCapture_web/le-capture-web/admin/resenas">Reseñas</a>
-        </nav>
-        <div class="cerrar">
-            <a href="/leCapture_web/le-capture-web/admin/logout">Cerrar sesión</a>
-        </div>
-    </aside>
+    <?php $seccionActiva = 'posts'; require_once __DIR__ . '/../partials/sidebar.php'; ?>
 
     <main class="contenido">
         <div class="cabecera">

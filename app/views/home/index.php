@@ -264,6 +264,7 @@ $hero3 = heroImg(3);
         <div class="seccion-titulo">
             <h2>Lo que dicen las familias</h2>
             <p>Cada experiencia es única y especial</p>
+            <a href="/leCapture_web/le-capture-web/resenas" class="btn-primario" style="margin-top:18px;display:inline-flex;">Dejá tu reseña</a>
         </div>
 
         <div class="resenas__grid">

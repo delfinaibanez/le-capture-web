@@ -148,18 +148,7 @@
 </head>
 <body>
 
-    <aside class="sidebar">
-        <div class="logo">Le Capture</div>
-        <nav>
-            <a href="/leCapture_web/le-capture-web/admin/dashboard" class="activo">Inicio</a>
-            <a href="/leCapture_web/le-capture-web/admin/posts">Blog</a>
-            <a href="/leCapture_web/le-capture-web/admin/galeria">Galería</a>
-            <a href="/leCapture_web/le-capture-web/admin/resenas">Reseñas</a>
-        </nav>
-        <div class="cerrar">
-            <a href="/leCapture_web/le-capture-web/admin/logout">Cerrar sesión</a>
-        </div>
-    </aside>
+    <?php $seccionActiva = 'dashboard'; require_once __DIR__ . '/partials/sidebar.php'; ?>
 
     <main class="contenido">
         <div class="bienvenida">
@@ -169,20 +158,16 @@
 
         <div class="tarjetas">
             <div class="tarjeta">
-                <div class="numero" id="total-posts">—</div>
+                <div class="numero"><?= htmlspecialchars($postCount) ?></div>
                 <div class="etiqueta">Posts publicados</div>
             </div>
             <div class="tarjeta">
-                <div class="numero" id="total-resenas">—</div>
-                <div class="etiqueta">Reseñas pendientes</div>
-            </div>
-            <div class="tarjeta">
-                <div class="numero" id="total-consultas">—</div>
-                <div class="etiqueta">Consultas nuevas</div>
-            </div>
-            <div class="tarjeta">
-                <div class="numero" id="total-fotos">—</div>
+                <div class="numero"><?= htmlspecialchars($fotoCount) ?></div>
                 <div class="etiqueta">Fotos en galería</div>
+            </div>
+            <div class="tarjeta">
+                <div class="numero"><?= htmlspecialchars($resenasPendientes) ?></div>
+                <div class="etiqueta">Reseñas pendientes</div>
             </div>
         </div>
 

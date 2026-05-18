@@ -210,6 +210,21 @@
     color: var(--color-acento);
 }
 
+.navbar__dropdown-cta {
+    padding: 12px 20px;
+    margin: 0 12px 10px;
+    border-radius: 999px;
+    background: var(--color-acento);
+    color: var(--color-blanco);
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.navbar__dropdown-cta:hover {
+    background: var(--color-acento-dark);
+    color: var(--color-blanco);
+}
+
 .navbar__dropdown-menu a::after {
     display: none !important;
 }

@@ -51,7 +51,8 @@ if ($controlador === '' || $controlador === 'inicio') {
 } elseif ($controlador === 'resenas') {
     require_once __DIR__ . '/app/controllers/ResenaController.php';
     $c = new ResenaController();
-    $accion === 'guardar' ? $c->guardar() : $c->index();
+    $sub = $partes[1] ?? '';
+    $sub === 'guardar' ? $c->guardar() : $c->index();
 
 } elseif ($controlador === 'contacto') {
     require_once __DIR__ . '/app/controllers/ContactoController.php';
@@ -103,7 +104,7 @@ if ($controlador === '' || $controlador === 'inicio') {
 
     } elseif ($accion === 'resenas') {
         AdminController::verificarSesion();
-        require_once __DIR__ . '/app/controllers/ResenaAdminController.php';
+        require_once __DIR__ . '/app/controllers/ResenaController.php';
         $c = new ResenaAdminController();
         $sub = $partes[2] ?? '';
         if ($sub === 'aprobar')        $c->aprobar($partes[3] ?? null);

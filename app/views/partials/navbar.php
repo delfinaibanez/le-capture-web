@@ -36,11 +36,19 @@ global $navCapitulos, $navTematicas;
                             </a>
                         <?php endforeach; ?>
                     <?php endif; ?>
+                    <div class="navbar__dropdown-separador"></div>
+                    <a href="/leCapture_web/le-capture-web/tematicas" class="navbar__dropdown-cta">
+                        Ver todas las temáticas
+                    </a>
                 </div>
             </div>
             <a href="/leCapture_web/le-capture-web/blog"
                class="<?= ($paginaActiva ?? '') === 'blog' ? 'activo' : '' ?>">
                Blog
+            </a>
+            <a href="/leCapture_web/le-capture-web/resenas"
+               class="<?= ($paginaActiva ?? '') === 'resenas' ? 'activo' : '' ?>">
+               Reseñas
             </a>
             <a href="/leCapture_web/le-capture-web/contacto"
                class="<?= ($paginaActiva ?? '') === 'contacto' ? 'activo' : '' ?>">
@@ -82,10 +90,13 @@ global $navCapitulos, $navTematicas;
                                 </a>
                             <?php endforeach; ?>
                         <?php endif; ?>
+                        <div class="navbar__dropdown-separador"></div>
+                        <a href="/leCapture_web/le-capture-web/tematicas" class="navbar__dropdown-cta">Temáticas</a>
                     </div>
                 </div>
 
                 <a href="/leCapture_web/le-capture-web/blog">Blog</a>
+                <a href="/leCapture_web/le-capture-web/resenas">Reseñas</a>
                 <a href="/leCapture_web/le-capture-web/contacto">Contacto</a>
                 <a href="https://wa.me/5492615788997" target="_blank" class="btn-primario">WhatsApp</a>
             </nav>

@@ -24,6 +24,12 @@ class ResenaModel extends Model {
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
+    public function guardar($datos) {
+        $datos['aprobada'] = 0;
+        $datos['created_at'] = date('Y-m-d H:i:s');
+        return $this->insertar($datos);
+    }
+
     public function contarPendientes() {
         $stmt = $this->db->prepare("
             SELECT COUNT(*) FROM resenas WHERE aprobada = 0
