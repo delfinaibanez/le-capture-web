@@ -37,9 +37,16 @@ if (!$sesion) {
 $colorPrimario = $sesion['color_primario'] ?? '#1a2e1a';
 $cuposLibres   = ($sesion['cupos_totales'] ?? 0) - ($sesion['cupos_ocupados'] ?? 0);
 
-$hoy         = new DateTime();
-$fechaCierre = !empty($sesion['fecha_cierre']) ? new DateTime($sesion['fecha_cierre']) : null;
+$hoy           = new DateTime();
+$fechaApertura = !empty($sesion['fecha_apertura']) ? new DateTime($sesion['fecha_apertura']) : null;
+$fechaCierre   = !empty($sesion['fecha_cierre']) ? new DateTime($sesion['fecha_cierre']) : null;
 $eventoFinalizado = $fechaCierre && $hoy > $fechaCierre;
+
+// Habilitada para reservar: publicada y dentro de las fechas (si existen)
+$habilitadaReservar = ! $eventoFinalizado
+    && !empty($sesion['publicada'])
+    && (is_null($fechaApertura) || $hoy >= $fechaApertura)
+    && (is_null($fechaCierre) || $hoy <= $fechaCierre);
 ?>
 
 <!DOCTYPE html>
@@ -93,7 +100,7 @@ $eventoFinalizado = $fechaCierre && $hoy > $fechaCierre;
                 <?= $eventoFinalizado ? 'Avisame de la próxima edición' : 'Reservar mi lugar' ?>
             </a>
 
-            <?php if (!$eventoFinalizado && $sesion['cupos_totales'] > 0): ?>
+            <?php if ($habilitadaReservar && (($sesion['cupos_totales'] ?? 0) > 0)): ?>
                 <p class="se-cupos">⚡ Solo quedan <?= $cuposLibres ?> lugares disponibles</p>
             <?php endif; ?>
         </div>
@@ -114,6 +121,18 @@ $eventoFinalizado = $fechaCierre && $hoy > $fechaCierre;
                     </div>
                     <?php endif; ?>
                 <?php endfor; ?>
+            </div>
+        </div>
+    </section>
+    <?php endif; ?>
+
+    <?php if (!empty($sesion['imagen_escenografia'])): ?>
+    <section class="se-escenografia">
+        <div class="se-escenografia__inner">
+            <span class="se-galeria__etiqueta">Escenografía</span>
+            <h2>El escenario</h2>
+            <div class="se-escenografia__foto">
+                <img src="/leCapture_web/le-capture-web/uploads/<?= htmlspecialchars($sesion['imagen_escenografia']) ?>" alt="Escenografía" />
             </div>
         </div>
     </section>
@@ -152,7 +171,7 @@ $eventoFinalizado = $fechaCierre && $hoy > $fechaCierre;
 </section>
 <?php endif; ?>
 
-    <?php if (!empty($fotos)): ?>
+    <?php if ($eventoFinalizado && !empty($fotos)): ?>
     <section class="se-galeria">
         <span class="se-galeria__etiqueta">La sesión en imágenes</span>
         <h2>Galería editorial</h2>
@@ -228,7 +247,7 @@ $eventoFinalizado = $fechaCierre && $hoy > $fechaCierre;
 </section>
 <?php endif; ?>
 
-    <section class="se-cta" style="<?= !empty($sesion['imagen_hero']) ? 'background-image: url(/leCapture_web/le-capture-web/uploads/' . htmlspecialchars($sesion['imagen_hero']) . ');' : 'background:' . htmlspecialchars($colorPrimario) . ';' ?>">
+    <section class="se-cta" style="<?php if (!empty($sesion['imagen_cta'])): ?>background-image: url(/leCapture_web/le-capture-web/uploads/<?= htmlspecialchars($sesion['imagen_cta']) ?>);<?php elseif (!empty($sesion['imagen_hero'])): ?>background-image: url(/leCapture_web/le-capture-web/uploads/<?= htmlspecialchars($sesion['imagen_hero']) ?>);<?php else: ?>background: <?= htmlspecialchars($colorPrimario) ?>;<?php endif; ?>">
         <div class="se-cta__tarjeta"></div>
         <div class="se-cta__inner">
             <?php if ($eventoFinalizado): ?>

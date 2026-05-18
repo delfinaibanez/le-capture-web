@@ -39,8 +39,14 @@ if ($controlador === '' || $controlador === 'inicio') {
 } elseif ($controlador === 'blog') {
     require_once __DIR__ . '/app/controllers/BlogController.php';
     $c = new BlogController();
-    $slug = $partes[1] ?? '';
-    $slug ? $c->post($slug) : $c->index();
+    $sub = $partes[1] ?? '';
+    if ($sub === 'categoria') {
+        $c->categoria($partes[2] ?? '');
+    } elseif ($sub) {
+        $c->post($sub);
+    } else {
+        $c->index();
+    }
 
 } elseif ($controlador === 'resenas') {
     require_once __DIR__ . '/app/controllers/ResenaController.php';

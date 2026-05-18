@@ -4,40 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= isset($post) ? 'Editar post' : 'Nuevo post' ?> — Le Capture</title>
-    <style>
-        * { box-sizing: border-box; margin: 0; padding: 0; }
-        body { font-family: sans-serif; background: #f5f5f5; display: flex; min-height: 100vh; }
-        .sidebar { width: 240px; background: #1a1a1a; color: #fff; display: flex; flex-direction: column; padding: 32px 0; position: fixed; top: 0; left: 0; height: 100vh; }
-        .sidebar .logo { font-size: 18px; font-weight: 500; padding: 0 24px 32px; border-bottom: 1px solid #333; color: #b07d62; }
-        .sidebar nav { padding: 24px 0; flex: 1; }
-        .sidebar nav a { display: block; padding: 12px 24px; color: #aaa; text-decoration: none; font-size: 14px; transition: all .2s; }
-        .sidebar nav a:hover, .sidebar nav a.activo { color: #fff; background: #2a2a2a; border-left: 3px solid #b07d62; }
-        .sidebar .cerrar { padding: 24px; border-top: 1px solid #333; }
-        .sidebar .cerrar a { color: #888; text-decoration: none; font-size: 13px; }
-        .sidebar .cerrar a:hover { color: #fff; }
-        .contenido { margin-left: 240px; padding: 40px; flex: 1; }
-        .cabecera { display: flex; justify-content: space-between; align-items: center; margin-bottom: 28px; }
-        .cabecera h1 { font-size: 22px; font-weight: 500; color: #1a1a1a; }
-        .volver { font-size: 14px; color: #888; text-decoration: none; }
-        .volver:hover { color: #b07d62; }
-        .card { background: #fff; border-radius: 12px; padding: 32px; box-shadow: 0 2px 8px rgba(0,0,0,0.06); }
-        label { display: block; font-size: 13px; color: #555; margin-bottom: 6px; margin-top: 20px; }
-        label:first-child { margin-top: 0; }
-        input[type=text], textarea { width: 100%; padding: 10px 14px; border: 1px solid #ddd; border-radius: 8px; font-size: 15px; font-family: sans-serif; outline: none; transition: border .2s; }
-        input[type=text]:focus, textarea:focus { border-color: #b07d62; }
-        textarea { min-height: 280px; resize: vertical; line-height: 1.6; }
-        input[type=file] { font-size: 14px; color: #555; }
-        .preview { margin-top: 10px; }
-        .preview img { max-width: 200px; border-radius: 8px; border: 1px solid #eee; }
-        .checks { display: flex; gap: 24px; margin-top: 20px; }
-        .checks label { display: flex; align-items: center; gap-8px; gap: 8px; font-size: 14px; color: #333; margin: 0; cursor: pointer; }
-        .error { background: #fdecea; color: #c0392b; padding: 10px 14px; border-radius: 8px; font-size: 13px; margin-bottom: 20px; }
-        .acciones { display: flex; gap: 12px; margin-top: 28px; }
-        .btn { padding: 10px 24px; background: #b07d62; color: #fff; border: none; border-radius: 8px; font-size: 15px; cursor: pointer; transition: background .2s; text-decoration: none; }
-        .btn:hover { background: #9a6a50; }
-        .btn-secundario { background: #f5f5f5; color: #555; }
-        .btn-secundario:hover { background: #eee; }
-    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/leCapture_web/le-capture-web/public/css/admin/admin.css">
 </head>
 <body>
     <aside class="sidebar">
@@ -76,8 +46,29 @@
                 <input type="text" id="titulo" name="titulo"
                        value="<?= htmlspecialchars($post['titulo'] ?? '') ?>" required>
 
+                <label for="subtitulo">Subtítulo</label>
+                <input type="text" id="subtitulo" name="subtitulo"
+                       value="<?= htmlspecialchars($post['subtitulo'] ?? '') ?>">
+
+                <label for="introduccion">Introducción</label>
+                <textarea id="introduccion" name="introduccion"><?= htmlspecialchars($post['introduccion'] ?? '') ?></textarea>
+
+                <label for="categoria_id">Categoría</label>
+                <select id="categoria_id" name="categoria_id" required>
+                    <option value="">Seleccioná una categoría</option>
+                    <?php foreach ($categorias ?? [] as $categoria): ?>
+                        <option value="<?= $categoria['id'] ?>"
+                            <?= isset($post['categoria_id']) && $post['categoria_id'] == $categoria['id'] ? 'selected' : '' ?>>
+                            <?= htmlspecialchars($categoria['nombre']) ?>
+                        </option>
+                    <?php endforeach; ?>
+                </select>
+
                 <label for="contenido">Contenido</label>
                 <textarea id="contenido" name="contenido" required><?= htmlspecialchars($post['contenido'] ?? '') ?></textarea>
+
+                <label for="consejo_practico">Consejo práctico</label>
+                <textarea id="consejo_practico" name="consejo_practico"><?= htmlspecialchars($post['consejo_practico'] ?? '') ?></textarea>
 
                 <label for="imagen">Imagen de portada</label>
                 <input type="file" id="imagen" name="imagen" accept="image/jpeg,image/png,image/webp">

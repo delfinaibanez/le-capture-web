@@ -62,13 +62,23 @@
                     </div>
                 <?php endif; ?>
 
-                <label style="margin-top:15px;">Color principal de la página</label>
-                <div style="display:flex;gap:12px;align-items:center;">
-                    <input type="color" name="color_primario" 
-                           value="<?= htmlspecialchars($sesion['color_primario'] ?? '#1a2e1a') ?>" 
-                           style="width:60px;height:40px;border:none;cursor:pointer;">
-                    <span style="font-size:13px;color:#888;">Este color se usará en botones y fondos.</span>
-                </div>
+                <label style="margin-top:15px;">Imagen CTA final (aparece antes del footer)</label>
+                <input type="file" name="imagen_cta" accept="image/*">
+                <?php if (!empty($sesion['imagen_cta'])): ?>
+                    <div class="preview">
+                        <img src="/leCapture_web/le-capture-web/uploads/<?= htmlspecialchars($sesion['imagen_cta']) ?>">
+                        <p style="font-size:12px;color:#888;">Imagen actual</p>
+                    </div>
+                <?php endif; ?>
+
+                <label style="margin-top:15px;">Foto única — Escenografía / setup</label>
+                <input type="file" name="imagen_escenografia" accept="image/*">
+                <?php if (!empty($sesion['imagen_escenografia'])): ?>
+                    <div class="preview">
+                        <img src="/leCapture_web/le-capture-web/uploads/<?= htmlspecialchars($sesion['imagen_escenografia']) ?>">
+                        <p style="font-size:12px;color:#888;">Imagen actual</p>
+                    </div>
+                <?php endif; ?>
             </div>
 
             <div class="card form-seccion">

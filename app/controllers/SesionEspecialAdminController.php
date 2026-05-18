@@ -34,10 +34,11 @@ class SesionEspecialAdminController {
         $cuposTotales  = intval($_POST['cupos_totales'] ?? 0);
         $cuposOcupados = intval($_POST['cupos_ocupados'] ?? 0);
         $videoUrl      = trim($_POST['video_url'] ?? '');
-        $colorPrimario = trim($_POST['color_primario'] ?? '#1a2e1a');
         $ctaTexto      = trim($_POST['cta_texto'] ?? '');
         $publicada     = isset($_POST['publicada']) ? 1 : 0;
         $imagenHero    = $this->subirImagenHero();
+        $imagenCta     = $this->subirImagenCta();
+        $imagenEsceno  = $this->subirImagenEscenografia();
 
         if (empty($nombre)) {
             $error = 'El nombre es obligatorio.';
@@ -71,8 +72,9 @@ class SesionEspecialAdminController {
             'cupos_totales'    => $cuposTotales,
             'cupos_ocupados'   => $cuposOcupados,
             'video_url'        => $videoUrl,
-            'color_primario'   => $colorPrimario,
             'cta_texto'        => $ctaTexto,
+            'imagen_cta'       => $imagenCta,
+            'imagen_escenografia' => $imagenEsceno,
             'publicada'        => $publicada,
             'categoria_id'     => $categoriaId,
             'imagen_hero'      => $imagenHero,
@@ -136,7 +138,6 @@ class SesionEspecialAdminController {
         $cuposTotales  = intval($_POST['cupos_totales'] ?? 0);
         $cuposOcupados = intval($_POST['cupos_ocupados'] ?? 0);
         $videoUrl      = trim($_POST['video_url'] ?? '');
-        $colorPrimario = trim($_POST['color_primario'] ?? '#1a2e1a');
         $ctaTexto      = trim($_POST['cta_texto'] ?? '');
         $publicada     = isset($_POST['publicada']) ? 1 : 0;
 
@@ -150,6 +151,10 @@ class SesionEspecialAdminController {
         $sesionActual = $this->model->obtenerPorId($id);
         $imagenHero   = $this->subirImagenHero();
         if (!$imagenHero) $imagenHero = $sesionActual['imagen_hero'];
+        $imagenCta    = $this->subirImagenCta();
+        if (!$imagenCta) $imagenCta = $sesionActual['imagen_cta'] ?? null;
+        $imagenEsceno = $this->subirImagenEscenografia();
+        if (!$imagenEsceno) $imagenEsceno = $sesionActual['imagen_escenografia'] ?? null;
 
         $slug = $this->generarSlug($nombre);
         if ($this->model->slugExiste($slug, $id)) {
@@ -175,8 +180,9 @@ class SesionEspecialAdminController {
             'cupos_totales'    => $cuposTotales,
             'cupos_ocupados'   => $cuposOcupados,
             'video_url'        => $videoUrl,
-            'color_primario'   => $colorPrimario,
             'cta_texto'        => $ctaTexto,
+            'imagen_cta'       => $imagenCta,
+            'imagen_escenografia' => $imagenEsceno,
             'publicada'        => $publicada,
             'imagen_hero'      => $imagenHero,
             'por_que_titulo_1' => trim($_POST['por_que_titulo_1'] ?? ''),
@@ -253,6 +259,48 @@ class SesionEspecialAdminController {
         if ($archivo['error'] !== UPLOAD_ERR_OK) return null;
 
         $nombre  = 'hero_especial_' . time() . '.' . $extension;
+        $carpeta = __DIR__ . '/../../uploads';
+        $destino = $carpeta . DIRECTORY_SEPARATOR . $nombre;
+
+        if (move_uploaded_file($archivo['tmp_name'], $destino)) {
+            return $nombre;
+        }
+        return null;
+    }
+
+    private function subirImagenCta() {
+        if (empty($_FILES['imagen_cta']['name'])) return null;
+
+        $archivo    = $_FILES['imagen_cta'];
+        $extension  = strtolower(pathinfo($archivo['name'], PATHINFO_EXTENSION));
+        $permitidas = ['jpg', 'jpeg', 'png', 'webp'];
+
+        if (!in_array($extension, $permitidas)) return null;
+        if ($archivo['size'] > 8 * 1024 * 1024) return null;
+        if ($archivo['error'] !== UPLOAD_ERR_OK) return null;
+
+        $nombre  = 'cta_especial_' . time() . '.' . $extension;
+        $carpeta = __DIR__ . '/../../uploads';
+        $destino = $carpeta . DIRECTORY_SEPARATOR . $nombre;
+
+        if (move_uploaded_file($archivo['tmp_name'], $destino)) {
+            return $nombre;
+        }
+        return null;
+    }
+
+    private function subirImagenEscenografia() {
+        if (empty($_FILES['imagen_escenografia']['name'])) return null;
+
+        $archivo    = $_FILES['imagen_escenografia'];
+        $extension  = strtolower(pathinfo($archivo['name'], PATHINFO_EXTENSION));
+        $permitidas = ['jpg', 'jpeg', 'png', 'webp'];
+
+        if (!in_array($extension, $permitidas)) return null;
+        if ($archivo['size'] > 8 * 1024 * 1024) return null;
+        if ($archivo['error'] !== UPLOAD_ERR_OK) return null;
+
+        $nombre  = 'esceno_especial_' . time() . '.' . $extension;
         $carpeta = __DIR__ . '/../../uploads';
         $destino = $carpeta . DIRECTORY_SEPARATOR . $nombre;
 

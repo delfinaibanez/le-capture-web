@@ -279,7 +279,7 @@
 
 .se-porque__grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 20px;
 }
 
@@ -321,6 +321,25 @@
     font-size: 0.88rem;
     color: var(--color-texto-suave);
     line-height: 1.75;
+}
+
+/* Escenografía: única foto del setup */
+.se-escenografia {
+    padding: 80px 24px;
+    background: var(--color-fondo);
+    text-align: center;
+}
+.se-escenografia__inner {
+    max-width: 900px;
+    margin: 0 auto;
+}
+.se-escenografia__foto img {
+    width: 100%;
+    max-width: 1000px;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.08);
 }
 
 /* ─────────────────────────────────────────

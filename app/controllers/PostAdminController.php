@@ -1,19 +1,23 @@
 <?php
 require_once __DIR__ . '/../models/PostModel.php';
+require_once __DIR__ . '/../models/CategoriaModel.php';
 
 class PostAdminController {
     private $model;
+    private $categoriaModel;
 
     public function __construct() {
-        $this->model = new PostModel();
+        $this->model          = new PostModel();
+        $this->categoriaModel = new CategoriaModel();
     }
 
     public function index() {
-        $posts = $this->model->obtenerTodos();
+        $posts = $this->model->obtenerTodosConCategoria();
         require_once __DIR__ . '/../views/admin/posts/index.php';
     }
 
     public function nuevo() {
+        $categorias = $this->categoriaModel->obtenerActivas();
         require_once __DIR__ . '/../views/admin/posts/form.php';
     }
 
@@ -23,35 +27,45 @@ class PostAdminController {
             exit;
         }
 
-        $titulo = trim($_POST['titulo'] ?? '');
-        $contenido = trim($_POST['contenido'] ?? '');
-        $publicado = isset($_POST['publicado']) ? 1 : 0;
-        $destacado = isset($_POST['destacado']) ? 1 : 0;
-        $slug = strtolower(str_replace(' ', '-', $titulo));
+        $titulo         = trim($_POST['titulo'] ?? '');
+        $subtitulo      = trim($_POST['subtitulo'] ?? '');
+        $introduccion   = trim($_POST['introduccion'] ?? '');
+        $contenido      = trim($_POST['contenido'] ?? '');
+        $consejoPractico= trim($_POST['consejo_practico'] ?? '');
+        $categoriaId    = trim($_POST['categoria_id'] ?? '');
+        $publicado      = isset($_POST['publicado']) ? 1 : 0;
+        $destacado      = isset($_POST['destacado']) ? 1 : 0;
+        $slug           = $this->generarSlug($titulo);
 
-        if (empty($titulo) || empty($contenido)) {
-            $error = 'Completá todos los campos obligatorios.';
+        if (empty($titulo) || empty($contenido) || empty($categoriaId)) {
+            $error = 'Completá todos los campos obligatorios y seleccioná una categoría.';
+            $categorias = $this->categoriaModel->obtenerActivas();
             require_once __DIR__ . '/../views/admin/posts/form.php';
             return;
         }
 
         if ($this->model->slugExiste($slug)) {
-            $error = 'El slug ya existe. Elegí otro.';
-            require_once __DIR__ . '/../views/admin/posts/form.php';
-            return;
+            $slug = $slug . '-' . time();
         }
 
         $imagen = $this->subirImagen();
 
+        $fechaPublicacion = $publicado ? date('Y-m-d H:i:s') : null;
+
         $datos = [
-            'titulo' => $titulo,
-            'slug' => $slug,
-            'contenido' => $contenido,
-            'imagen_portada' => $imagen,
-            'publicado' => $publicado,
-            'destacado' => $destacado,
-            'fecha_publicacion' => date('Y-m-d H:i:s'),
-            'created_at' => date('Y-m-d H:i:s')
+            'titulo'           => $titulo,
+            'subtitulo'        => $subtitulo,
+            'introduccion'     => $introduccion,
+            'contenido'        => $contenido,
+            'consejo_practico' => $consejoPractico,
+            'categoria_id'     => $categoriaId,
+            'imagen_portada'   => $imagen,
+            'publicado'        => $publicado,
+            'destacado'        => $destacado,
+            'autor'            => 'Candela',
+            'slug'            => $slug,
+            'fecha_publicacion'=> $fechaPublicacion,
+            'created_at'       => date('Y-m-d H:i:s')
         ];
 
         $this->model->insertar($datos);
@@ -72,6 +86,7 @@ class PostAdminController {
                 header('Location: /leCapture_web/le-capture-web/admin/posts');
                 exit;
             }
+            $categorias = $this->categoriaModel->obtenerActivas();
             require_once __DIR__ . '/../views/admin/posts/form.php';
         }
 
@@ -82,29 +97,31 @@ class PostAdminController {
                 exit;
             }
 
-            $titulo    = trim($_POST['titulo'] ?? '');
-            $contenido = trim($_POST['contenido'] ?? '');
+            $titulo          = trim($_POST['titulo'] ?? '');
+            $subtitulo       = trim($_POST['subtitulo'] ?? '');
+            $introduccion    = trim($_POST['introduccion'] ?? '');
+            $contenido       = trim($_POST['contenido'] ?? '');
+            $consejoPractico = trim($_POST['consejo_practico'] ?? '');
+            $categoriaId     = trim($_POST['categoria_id'] ?? '');
 
-            if (empty($titulo) || empty($contenido)) {
-                $error = 'El título y el contenido son obligatorios.';
+            if (empty($titulo) || empty($contenido) || empty($categoriaId)) {
+                $error = 'Completá todos los campos obligatorios y seleccioná una categoría.';
                 $post  = $this->model->obtenerPorId($id);
+                $categorias = $this->categoriaModel->obtenerActivas();
                 require_once __DIR__ . '/../views/admin/posts/form.php';
                 return;
             }
 
             $postActual = $this->model->obtenerPorId($id);
 
-            // Regenerar slug solo si cambió el título
             $slug = $this->generarSlug($titulo);
             if ($this->model->slugExiste($slug, $id)) {
                 $slug = $slug . '-' . time();
             }
 
-            // Si subieron imagen nueva la reemplaza, sino mantiene la anterior
             $imagen = $this->subirImagen();
             if (!$imagen) $imagen = $postActual['imagen_portada'];
 
-            // Fecha de publicación: solo se setea la primera vez que se publica
             $yaPublicado  = $postActual['publicado'];
             $ahoraPublica = isset($_POST['publicado']) ? 1 : 0;
             $fechaPublicacion = $postActual['fecha_publicacion'];
@@ -114,11 +131,16 @@ class PostAdminController {
 
             $datos = [
                 'titulo'            => $titulo,
-                'slug'              => $slug,
+                'subtitulo'         => $subtitulo,
+                'introduccion'      => $introduccion,
                 'contenido'         => $contenido,
+                'consejo_practico'  => $consejoPractico,
+                'categoria_id'      => $categoriaId,
+                'slug'              => $slug,
                 'imagen_portada'    => $imagen,
                 'destacado'         => isset($_POST['destacado']) ? 1 : 0,
                 'publicado'         => $ahoraPublica,
+                'autor'             => 'Candela',
                 'fecha_publicacion' => $fechaPublicacion,
             ];
 
@@ -141,17 +163,26 @@ class PostAdminController {
             $texto = preg_replace('/[^a-z0-9\s-]/', '', $texto);
             $texto = preg_replace('/[\s-]+/', '-', trim($texto));
             return $texto;
-                }
-            private function subirImagen() {
-            if (empty($_FILES['imagen']['name'])) return null;
+        }
+
+        private function subirImagen() {
+            if (empty($_FILES['imagen']['name'])) {
+                return null;
+            }
 
             $archivo    = $_FILES['imagen'];
             $extension  = strtolower(pathinfo($archivo['name'], PATHINFO_EXTENSION));
             $permitidas = ['jpg', 'jpeg', 'png', 'webp'];
 
-            if (!in_array($extension, $permitidas)) return null;
-            if ($archivo['size'] > 5 * 1024 * 1024) return null;
-            if ($archivo['error'] !== UPLOAD_ERR_OK) return null;
+            if (!in_array($extension, $permitidas)) {
+                return null;
+            }
+            if ($archivo['size'] > 5 * 1024 * 1024) {
+                return null;
+            }
+            if ($archivo['error'] !== UPLOAD_ERR_OK) {
+                return null;
+            }
 
             $nombre  = 'post_' . time() . '_' . rand(100, 999) . '.' . $extension;
             $carpeta = __DIR__ . '/../../uploads';
@@ -169,13 +200,11 @@ class PostAdminController {
             return null;
         }
 
-
-
-            public function eliminar($id) {
-        if (!$id) {
-            header('Location: /leCapture_web/le-capture-web/admin/posts');
-            exit;
-        }
+        public function eliminar($id) {
+            if (!$id) {
+                header('Location: /leCapture_web/le-capture-web/admin/posts');
+                exit;
+            }
 
         $post = $this->model->obtenerPorId($id);
 
