@@ -214,6 +214,7 @@ $habilitadaReservar = ! $eventoFinalizado
                            class="<?= $destacado ? 'btn-primario' : 'btn-secundario' ?>">
                             Reservar Sesión
                         </a>
+                        <p class="pack-card__cuotas">Hasta 6 cuotas sin interés con tarjeta.</p>
                     </div>
                 <?php endif; ?>
             <?php endfor; ?>

@@ -20,28 +20,12 @@
     <div class="sesion-header">
         <span class="sesion-header__etiqueta">Sesiones</span>
         <h1 class="sesion-header__titulo">Sesión de Embarazo</h1>
-        <p class="sesion-header__descripcion">
-         <p>
-        Tu embarazo es un momento único, lleno de cambios, ilusión y ternura. 
-        En esta sesión, mi objetivo es capturar esa <strong>conexión tan especial</strong> 
-        que ya te une con tu bebé y tu familia.
-        </p>
-
-    <p>
-        Cada detalle está pensado para que te sientas <strong>cómoda, tranquila y radiante</strong>. 
-        Trabajamos en un ambiente cálido y cuidado, respetando tus tiempos para que la experiencia 
-        sea tan linda como el resultado final.
-    </p>
-
-    <p>
-        Podés elegir el estilo que más te identifique: desde fotografías <strong>íntimas y delicadas en estudio</strong>, 
-        hasta imágenes <strong>naturales al aire libre</strong>, aprovechando la luz suave y escenarios que realzan tu esencia.
-    </p>
-
-    <p>
-        El resultado son recuerdos <strong>auténticos, elegantes y atemporales</strong> que te acompañarán toda la vida.
-    </p>
-    </div>
+        <div class="sesion-header__descripcion">
+            <p>Tu embarazo es un momento único, lleno de cambios, ilusión y ternura. En esta sesión, mi objetivo es capturar esa <strong>conexión tan especial</strong> que ya te une con tu bebé y tu familia.</p>
+            <p>Cada detalle está pensado para que te sientas <strong>cómoda, tranquila y radiante</strong>. Trabajamos en un ambiente cálido y cuidado, respetando tus tiempos para que la experiencia sea tan linda como el resultado final.</p>
+            <p>Podés elegir el estilo que más te identifique: desde fotografías <strong>íntimas y delicadas en estudio</strong>, hasta imágenes <strong>naturales al aire libre</strong>, aprovechando la luz suave y escenarios que realzan tu esencia.</p>
+            <p>El resultado son recuerdos <strong>auténticos, elegantes y atemporales</strong> que te acompañarán toda la vida.</p>
+        </div>
 
     <!-- CARRUSEL -->
     <section class="sesion-carrusel">
@@ -94,6 +78,7 @@
                     <li>Entrega en álbum digital privado.</li>
                 </ul>
                 <a href="https://wa.me/5492615788997" target="_blank" class="btn-secundario">Reservar Sesión</a>
+                <p class="pack-card__cuotas">Hasta 3 cuotas sin interés con tarjeta.</p>
             </div>
 
             <div class="pack-card destacado">
@@ -113,6 +98,7 @@
                     <li>Envío a domicilio incluído (Válido sólo para el Gran Mendoza).</li>
                 </ul>
                 <a href="https://wa.me/5492615788997" target="_blank" class="btn-primario">Reservar Sesión</a>
+                <p class="pack-card__cuotas">Hasta 6 cuotas sin interés con tarjeta.</p>
             </div>
 
             <div class="pack-card">
@@ -130,6 +116,7 @@
                     <li>Envío a domicilio incluído (Válido sólo para el Gran Mendoza).</li>
                 </ul>
                 <a href="https://wa.me/5492615788997" target="_blank" class="btn-secundario">Reservar Sesión</a>
+                <p class="pack-card__cuotas">Hasta 4 cuotas sin interés con tarjeta.</p>
             </div>
         </div>
     </section>

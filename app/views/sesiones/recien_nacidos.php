@@ -72,6 +72,7 @@
                     <li>No incluye fotos familiares</li>
                 </ul>
                 <a href="https://wa.me/5492615788997" target="_blank" class="btn-secundario">Reservar Sesión</a>
+                <p class="pack-card__cuotas">Hasta 3 cuotas sin interés con tarjeta.</p>
             </div>
 
             <div class="pack-card destacado">
@@ -90,6 +91,7 @@
                     <li>Envío a domicilio incluído (Válido sólo para el Gran Mendoza). </li> 
                 </ul>
                 <a href="https://wa.me/5492615788997" target="_blank" class="btn-primario">Reservar Sesión</a>
+                <p class="pack-card__cuotas">Hasta 6 cuotas sin interés con tarjeta.</p>
             </div>
 
             <div class="pack-card">
@@ -106,6 +108,8 @@
                   <li>  Entrega en cajita de papel.</li>
                   <li>  Envío a domicilio incluído (Válido sólo para el Gran Mendoza).</li>
                 </ul>
+                <a href="https://wa.me/5492615788997" target="_blank" class="btn-secundario">Reservar Sesión</a>
+                <p class="pack-card__cuotas">Hasta 4 cuotas sin interés con tarjeta.</p>
             </div>
         </div>
     </section>

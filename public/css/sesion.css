@@ -31,6 +31,15 @@
     font-size: 1rem;
     line-height: 1.85;
     color: var(--color-texto-suave);
+    text-align: left;
+}
+
+.sesion-header__descripcion p {
+    margin-bottom: 18px;
+}
+
+.sesion-header__descripcion p:last-child {
+    margin-bottom: 0;
 }
 
 /* ─────────────────────────────────────────
@@ -49,6 +58,8 @@
     margin: 0 auto;
     border-radius: 12px;
     box-shadow: 0 20px 60px rgba(0,0,0,0.12);
+    background: var(--color-blanco);
+    border: 1px solid rgba(168,149,133,0.15);
 }
 
 .carrusel__track {
@@ -710,6 +721,20 @@
 .tab-content.activo {
     display: block;
 }
+
+.sesion-tab-descripcion {
+    max-width: 640px;
+    margin: 0 auto 36px;
+    padding: 0 18px;
+    color: var(--color-texto-suave);
+    line-height: 1.9;
+    text-align: center;
+}
+
+.sesion-tab-descripcion p {
+    margin: 0;
+}
+
 /* ─────────────────────────────────────────
    RESPONSIVE
 ───────────────────────────────────────── */
